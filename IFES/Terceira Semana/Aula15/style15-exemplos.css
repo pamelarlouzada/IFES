@@ -1,0 +1,76 @@
+*{
+    border: solid 1px black;
+}
+
+/* EXEMPLO 3*/
+/* div {
+    display: inline;
+}
+
+span:first-of-type{
+    display: block;
+} */
+
+
+/* EXEMPLO 4*/
+/* visibility: hidden;  ->  a div fica invisível mas o espaço ocupado fica reservado*/
+/* div {
+    border: solid 5px black;
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+}
+
+#div1 {
+    visibility: hidden; 
+}
+
+#div2 {
+    display: none;
+} */
+
+/* EXEMPLO 5*/
+/* elementos de linha (como o span) não obedecem tamanhos como 
+height e widht, para ser válido é preciso alterar o display para display: block;*/
+/* span {
+    height: 100px;
+    width: 300px;
+    display: inline-block;
+} */
+
+
+/* EXEMPLO 6*/
+/*display: contents; -> o display para de existir e os itens desse display passam a pertencer ao pai */
+/* div {
+    margin: 30px;
+    padding: 10px;
+}
+
+#div2{
+    display: contents;
+} */
+
+
+/* EXEMPLO 6*/
+div{
+    margin: 30px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    transition: 0.7s;
+}
+
+#div1 {
+    background-color: blue;
+}
+#div2 {
+    background-color: yellow;
+}
+#div3 {
+    background-color: red;
+}
+
+div:hover{
+    opacity: 0.5;
+    transition: 0.7s;
+}
