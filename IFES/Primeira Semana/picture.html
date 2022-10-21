@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <h1>Picture</h1>
+
+    <picture>
+        <source media="(min-width: 600px)" srcset="img/sun.png"> <!-- a imagem só será mostrada se a tela tiver o tamanho mínimo de 600px-->
+        <source media="(min-width: 400px)" srcset="img/sun75.png"> 
+        <source media="(min-width: 300px)" srcset="img/sun50.png"> 
+        <source media="(min-width: 200px)" srcset="img/sun25.png"> 
+        <img src="img/sun.png" alt="Sol">
+    </picture>
+    
+</body>
+</html>

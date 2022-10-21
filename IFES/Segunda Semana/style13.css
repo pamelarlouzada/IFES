@@ -1,0 +1,70 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap&family=Sofia&dispaly=swap'); */
+
+body, a {
+    color: gray;
+}
+
+h1 {
+    font-size: 30px; /* 1vw = 1% da página*/
+    text-align: center;
+    text-shadow: 0px 0px 3px yellow ; /* distancia em x e y, blur, cor */
+    font-family: sans-serif; /* primeiro define a família: sefir, sans-serif, monospace, cursive */
+    font-style: italic;
+    font-weight: normal;
+    font-variant: small-caps;
+    font: normal small-caps normal 24px/60px "Sofia"; /* style, variant, weight, size/line-height, family*/
+}
+
+p{
+    text-align: justify;
+    text-decoration: underline wavy peru; /*underline wavy red */
+    text-transform: none; /* capitalize uppercase */
+    text-indent: 3rem;
+    letter-spacing: 2px; 
+    line-height: 2rem; /* altura da linha */
+    word-spacing: 10px; /* espaçamento entre palavras */
+    white-space: normal ; /* nowrap impede a quebra de linha / pre-line não conserva espaços em branco*/
+}
+
+p a {
+    font-family: 'Sofia', cursive;
+    color: crimson;
+}
+
+a:link{ /*links não visitados */
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+a:visited { /* links visitados*/
+    color: blue;
+}
+
+a:hover { /* passando o mouse em cima */
+    color: red;
+}
+
+a:active { /* sendo clicado */
+    color: darkgreen;
+}
+/* tem que ser nessa ordem:  :link :visited :houver :active*/
+
+p > a{
+    border: solid 1px black;
+    padding: 5px;
+    background-color: lightgrey;
+    border-radius: 10px;
+
+}
+
+ul {
+    list-style-type: circle;
+    /* list-style-image: url(); */
+}
+
+li {
+    line-height: 35px;
+    /* display: inline-block; */
+}

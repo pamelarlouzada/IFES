@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Multimídea</title>
+</head>
+<body>
+    <h1>Conteúdo Multimídea</h1>
+    <hr>
+
+    <video controls width="800" height="600" muted poster="midia/popeye_for_president.jpg">  <!-- autoplay só funciona om o muted -->
+        <!-- poster só funciona sem autoplay  -->
+        <!--    
+        áudio: mp3, wave, og   |     extenções suportadas
+        vídeo: mp4, webm, iog  |
+        --> 
+        <source src="/midia/PopeyeforPresident.mp4" type="video/mp4">
+        <source src="/midia/PopeyeforPresident.webm" type="video/webm">
+        <source src="/midia/PopeyeforPresident.ogv" type="video/ogv">
+        <track kind="captions" srclang="en-us" src="/midia/PopeyeforPresident.en-us.vtt" label="Closed Captions">
+        <track kind="subtitles" srclang="es" src="/midia/PopeyeforPresident.en-us.vtt" label="ES">
+        <track kind="subtitles" srclang="pt-br" src="/midia/PopeyeforPresident.pt-br.vtt" label="PT-BR" default>
+
+        Seu navegador não suporta vídeos HTML5.
+
+        <!-- 
+        Atributos:
+        kind="captions" : transcrição do áudio original
+        kind="chapters" : transcrição de títulos e capítulos ao longo do vídeo
+        kind="descriptions":  permite que coloque uma descrição do conteúdo do video, muito usado para dispositivos que o vídeo não carrega
+        kind="subtitles" : para traduções
+        kind="metadata": armazena informações via javascript
+        --> 
+
+    </video>
+</body>
+</html>

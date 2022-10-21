@@ -1,0 +1,54 @@
+/* Inserir conteúdo, pode ser usado em classe e id*/
+
+p:after {
+    content: " *";
+}
+
+p:before {
+    content: " AA";
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+}
+h1::after{
+    content: "";
+    background-image: linear-gradient(120deg, #e5ea15, #15bfea);
+    width: 90%;
+    height: 5px;
+    position: absolute; 
+    /* quando uma posição e absoluta, o pai tem que ser relative*/
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) skew(-50deg);
+}
+
+#p3:first-letter {
+    font-size: 200%;
+    color: red;
+}
+
+#p2:first-line {
+    background-color: #e5ea15;
+    font-variant: small-caps;
+}
+
+ul>li::marker {
+    content: "* ";
+} 
+
+ol>li::marker {
+    color: blue;
+}
+
+/* que começa com "http "*/
+a[href^="http"] {
+    font-weight: bold;
+    display: block;
+}
+
+/* que termina com .pdf */
+a[href$=".pdf"]::after {
+    content: "(.pdf)";
+}

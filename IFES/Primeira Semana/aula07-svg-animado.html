@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br  ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem SVG</title>
+</head>
+<body>
+    <h1>Imagens SVG</h1>
+    <hr>
+<h2></h2>
+    <svg width="600" height="300">
+        <rect width="596" height="296" fill="none" stroke="black" stroke-width="4" y="2" x="2"  />
+        <rect width="60" height="30" fill="yellow" stroke="black" stroke-width="4" y="10" x="10"  id="r1"/>
+
+        <!-- <animate xlink:href="#r1" attributeName="x" from="10" to="500" dur="2s" begin="1s" fill="freeze" repeatCount="indefinite"/> -->
+        <!-- <animate xlink:href="#r1" attributeName="x" from="10" to="500" dur="2s" begin="1s" fill="remove" repeatCount="1"/>   begin="click" : só começa a animaçã oquando clicar -->
+        <animate xlink:href="#r1" attributeName="width" from="10" to="500" dur="2s" begin="1s" fill="remove" repeatCount="1"/>
+    </svg>
+    
+</body>
+</html>

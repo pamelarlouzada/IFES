@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <h1>Formulários</h1>
+    <hr>
+    <form method="post">
+        <!-- o atributo 'name' indica como esse valor vai chegar no sevidor-->
+        <!-- o atributo 'id' é usado para referenciar o elemento em relação a outros elementos html ou javascript-->
+        <!-- o atributo 'value' nos inputs do tipo texto, é considerado um valor padrão caso a pessoa não preencha -->
+        <p>
+            <label for="txtNomeCompleto">Nome Completo</label><br>
+            <input type="text" name="NomeCompleto" id="txtNomeCompleto" placeholder="Insira seu nome completo">
+        </p>
+        <p>
+            <label for="txtEmail">E-mail</label><br>
+            <input type="text" name="Email" id="txtEmail" placeholder="Digite o email">
+        </p>
+        <p>
+        <fieldset>
+            <legend>Cargo Pretendido</legend>
+            <input type="radio" name="Cargo" id="rdProgramador" value="P">
+            <label for="txtCargo">Programador</label><br>
+            <input type="radio" name="Cargo" id="rdWebDesigner" value="W">
+            <label for="txtCargo">Web Designer</label><br>
+        </fieldset>
+        </p>
+
+        <p>
+            <label for="slctEstado">Selecione o Estado</label><br>
+            <select name="Estado" id="slctEstado">
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="RJ" selected>Rio de Janeiro</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="slctLinguagem">Linguagem de programação</label><br>
+            <select name="Estado" id="slctLinguagem" size="6" multiple>
+                <option value="HTML">HTML</option>
+                <option value="CSS" selected>CSS</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Go">Go</option>
+            </select>
+        </p>
+        <p>
+            <input type="checkbox" name="Aceito" id="chkAceito">
+            <label for="chkAceito">Aceito os termos de uso</label>
+        </p>
+        <p>
+            <label for="txtCidade">Cidade</label>
+            <input type="text" name="Cidade" id="txtCidade" list="cidades">
+            <datalist id="cidades">
+                <option value="Vitória">
+                <option value="Serra">
+                <option value="Vila Velha">
+                <option value="Guarapari">
+                <option value="Cachoeiro">
+            </datalist>
+        </p>
+
+        <p>
+            <label for="txtCurriculo">Currículo</label><br>
+            <textarea name="Curriculo" id="txtCurriculo" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </p>
+
+    </form>
+</body>
+
+</html>

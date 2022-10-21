@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+
+<body>
+    <h1>Tabela</h1>
+    <hr>
+    <table border="1" width="60%" cellpadding="5" cellspacing="5" align="center"
+    bgcolor="silver" frame="box" rules="all"> 
+     <!-- atributo frame (das bordas) pode ser void, below, above, hsides, vsides, lhs, rhs, box-->
+     <!-- atributo rules (bordas internas) pode ser none, rows, cols, all-->
+        <caption>Título da tabela</caption>
+        <thead>
+            <tr>
+                <th colspan="2">Nome Completo</th>
+                <!-- <th>Celula 1, 2</th> -->
+                <th rowspan="2" width="20%">Idade</th>
+            </tr>
+            <tr>
+                <th align="left">Nome</th>
+                <th align="left">Sobrenome</th>
+                <!-- <th>Celula 1, 3</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Celula 2, 1</td>
+                <td>Celula 2, 2</td>
+                <td align="center">Celula 2, 3</td>
+            </tr>
+            <tr>
+                <td>Celula 3, 1</td>
+                <td>Celula 3, 2</td>
+                <td align="center">Celula 3, 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Celula 4, 1</td>
+                <td>Celula 4, 2</td>
+                <td align="center">Celula 4, 3</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+
+</html>

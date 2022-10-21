@@ -1,0 +1,41 @@
+body {
+    /* background-color: hsla(0, 6%, 51%);
+    background-image: url("bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: right bottom; */
+    
+    background: gray url("bg.png") repeat fixed;
+
+    background-size: 100px;  /* tamanho da foto*/
+}
+
+p {
+    background-color: rgba(0, 0, 255, 0.5);
+    border-style: dotted; /* border-style: dotted solid dotted solid  (para Top, right, bottom e left*/
+    border-width: 3px;
+    border-left-style: solid;
+
+    border: 3px solid black; /* resumo - width, style, color,*/
+    border-radius: 10px;
+
+    /* border-top-left-radius: 10px; */
+
+    margin: 20px;
+}
+
+#p1 {
+    margin: 10px auto; 
+    /* margin-top: 50px 10px  (equivale a 50 em cima e embaixo e 10 na direita e esquerda*/
+    /* margin-top: 50px 10px 50px 10px;  (top, right bottom left)*/
+    width: 200px; /* diz sobre o conteúdo e não tamanho total incluido margim epadding*/
+    height: 250px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1px;
+    outline-offset: 10px;
+
+    outline: 3px solid black; /* largura da borda, estilo, cor*/
+    
+
+}
