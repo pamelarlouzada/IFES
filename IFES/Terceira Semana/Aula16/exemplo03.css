@@ -1,0 +1,25 @@
+body {
+    background-image: url(bg.jpg);
+    height: 3000px;
+    background-blend-mode: lighten;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#div1 {
+    background-color:aquamarine;
+    /* position: relative;
+    left: 50px;
+    top: 80px; */
+    
+}
+
+#div2{
+    background-color:aqua;
+    position: fixed; /*elemento fica fixo msm com a rolagem do navegador*/
+    left: 50px; /*left e top tem prioridade*/
+}

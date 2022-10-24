@@ -1,0 +1,17 @@
+div {
+    height: 100px;
+    width: 100px;
+}
+
+#div1 {
+    background-color:aquamarine;
+    position: relative;
+    left: 50px;
+    top: 80px;
+    
+}
+
+#div2{
+    background-color:cadetblue;
+
+}
