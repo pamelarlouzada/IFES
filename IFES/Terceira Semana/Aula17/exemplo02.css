@@ -1,0 +1,16 @@
+body {
+    margin: 30px;
+}
+
+p>img{
+    margin-right: 10px;
+    height: 200px;
+    float: left;
+}
+
+p {
+    font-size: 20px;
+    text-align: left;
+    background-image: url(bg.jpg);
+    overflow: hidden; /*rack? css*/
+}

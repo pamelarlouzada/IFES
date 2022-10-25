@@ -1,0 +1,17 @@
+* {
+    /* 
+
+    >> quando define a altura e largura de elementos, a borda e
+    o padding farão parte da altura e largura
+    >> box-sizing: border-box; ajuda a definir a quantidade imgs por linha, caso use o 
+    box-sizing: content-box; as imgs seao distribuídas na linha conforme o tamanho
+     */
+    box-sizing: border-box;
+}
+
+img {
+    float: left;
+    width: 25%;
+    border: solid 10px pink;
+    border-radius: 20px;
+}

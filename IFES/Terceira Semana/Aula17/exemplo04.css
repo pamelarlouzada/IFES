@@ -1,0 +1,31 @@
+#div1, #div2 {
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    padding: 30px;
+}
+
+#div1 {
+    background-color:aquamarine;
+    float: left;
+    margin-right: 10px;
+}
+
+#div2{
+    background-color:aqua;
+    float: left;
+    margin-left: 10px;
+}
+
+p {
+    clear: left;
+    text-align: justify;
+    padding-top: 10px;
+}
+
+#divPai {
+    /* background-image: url(bg.jpg); */
+    background-size: 500px;
+    background-color:bisque;
+    overflow: hidden;
+}
