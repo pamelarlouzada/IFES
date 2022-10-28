@@ -1,0 +1,11 @@
+grid: Conjunto de inhas vericais e horizontais que definem celulas. Cada celula de um grid é u elemento container, ou seja
+pde  conter outros elementos grupados
+
+A diferença de flexbox para grid é que grid permite uma organização bidimensional enquanto flexbox é unidimensional
+
+Como boa parte do site demanda uma organização bidimensional do conteúdo, grids são mais adequados para se criar layouts de páginas inteiras, assim, o flexbox complementa 
+o grid sendo aplicado em determinadas regiões da página
+
+As cantagens do grid são um código HTML mais limpo, a dispnsa de fremeworks de CSS (como bootstrap por exemplo), a flexibilidade e facilidade de uso e o suporte oferecido pelos navegadores
+
+Apesar de ter sid lançada em 2017, é uma tecnologia suportada pelos principais navegadores.
