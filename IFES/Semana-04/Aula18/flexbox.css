@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; é necessário para a margin e padding 
+    serem incluidos no elemento */
+    box-sizing: border-box;
+}
+
+main {
+    background-color: antiquewhite;
+    /* display: flex; -> a div deixa de se comportar como elemento de bloco e se comportam em linha */
+    display: flex; 
+    /* flex-direction -> Define o eixo principal do flexbox, se serão alinhados verticalmente ou horizontalmente */
+    /* flex-direction: row; */ 
+    /* flex-wrap -> : */
+    /* flex-wrap: wrap; */
+    flex-flow: row nowrap; /* flex-direction - flex-wrap*/
+    height: 400px;
+    /* justify-content -> permite o alinhamento no eixo principal */
+    justify-content: space-evenly;
+    /* align-items -> permite o alinhamento no eixo cruzado (nesse caso, o vertical) */
+    align-items: center;
+    /* align-content -> alinhamento vertical das linhas qe dividem os itens*/
+    align-content: space-evenly;
+}
+
+div {
+    /* height: 120px; */
+    width: 30%;
+    border: dotted 2px black;
+    font-size: 60px;
+    text-align: center;
+    line-height: 120px;
+}
+
+/* #div1 { order:3; } */
+
+
+#div3 {
+    /* taxa de encolhimento */
+    /* flex-shrink: 0;   */
+    /* taxa de crescimento */
+    /* flex-grow: 0; */
+    /* flex-basis: 200px; */
+    flex:  0 0 200px; /* grow - shrink - basis */
+    align-self: flex-start;
+}
+
+/*
+
+
+*/
