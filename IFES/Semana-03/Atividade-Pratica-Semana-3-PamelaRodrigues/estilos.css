@@ -157,7 +157,7 @@ a {
 }
 
 .progresso {
-    height: 3vw;
+    height: 3vh;
     /* 22. largura de 100% do elemento pai */
     width: 100%;
     background-color: #ddd;

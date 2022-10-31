@@ -25,20 +25,26 @@ main {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100px auto 100px;
     grid-template-areas: 
-        "h h h h h h h h h h h h";
+        "h h h h h h h h h h h h"
+        "m m m c c c c c c c c c"
+        "f f f f f f f f f f f f";
 }
 
 header {
     background-color: #949ce0;
-    /* grid-column-start: 1; */
-    /* grid-column-end: 3; */ /*3 se refere as linhas de espaçamentos*/
+    grid-area: h;
 }
 nav {
     background-color:#a7a7a7;
+    grid-area: m;
 }
 article {
     background-color:#e7e7e7;
     color: #373a58;
+    grid-area: c;
 }
 footer {
-    background-color:#373a58;}
+    background-color:#373a58;
+    grid-area: f;
+}
+
