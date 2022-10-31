@@ -1,0 +1,20 @@
+
+/* EXEMPLO 4*/
+/* 
+display: none; -> elemento fica oculto
+visibility: hidden;  ->  a div fica invisível mas o espaço ocupado fica reservado
+*/
+div {
+    border: solid 5px black;
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+}
+
+#div1 {
+    visibility: hidden; 
+}
+
+#div2 {
+    display: none;
+}

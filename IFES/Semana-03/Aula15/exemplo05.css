@@ -1,0 +1,14 @@
+
+/* EXEMPLO 5*/
+
+/* 
+elementos de linha (como o span) não obedecem tamanhos como height e widht, 
+para ser válido é preciso alterar o display para display: block;
+*/
+
+span {
+    border: solid 1px black;
+    height: 100px;
+    width: 300px;
+    display: inline-block;
+}
