@@ -6,7 +6,6 @@
 }
 
 body {
-    background-color: #fff7d8;
     margin: 10px;
 }
 
@@ -31,10 +30,18 @@ main > div:nth-child(4n) {
     background-color: #eee;
 }
 
-main {
+#c1 {
+    border: 1px solid black;
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, 
-    minmax(100px, 1fr));
-    grid-auto-rows: 100px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+
+#c2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
 }

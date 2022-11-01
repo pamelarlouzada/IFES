@@ -6,7 +6,6 @@
 }
 
 body {
-    background-color: #fff7d8;
     margin: 10px;
 }
 
@@ -32,9 +31,22 @@ main > div:nth-child(4n) {
 }
 
 main {
+    height: calc(100vh - 20px);
+    border: 1px solid black;
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, 
-    minmax(100px, 1fr));
-    grid-auto-rows: 100px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    /* justify-content: space-evenly;
+    align-content: space-evenly; */
+    place-content: space-evenly;
+    /* justify-items: stretch;
+    align-items: end; */
+    place-items: stretch;
+}
+
+main > div:nth-child(9n) {
+    /* justify-self: start;
+    align-self: start; */
+    place-self: start; /*equivalente as duas linhas a cima*/
 }

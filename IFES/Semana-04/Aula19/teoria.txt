@@ -9,3 +9,31 @@ o grid sendo aplicado em determinadas regiões da página
 As cantagens do grid são um código HTML mais limpo, a dispnsa de fremeworks de CSS (como bootstrap por exemplo), a flexibilidade e facilidade de uso e o suporte oferecido pelos navegadores
 
 Apesar de ter sid lançada em 2017, é uma tecnologia suportada pelos principais navegadores.
+
+
+* grid-column: 12; define a quantidade de celulas que ocuparão a linha,
+* grid-template-columns: 100px auto 100px;  define a quantidade de colunas
+* grid-gap: 10px; define o espaçamento entre celulas
+* object-fit: cover; define como a imagem vai ser ajustada (fill etc)
+* grid-auto-flow: dense; ajusta as celulas para não ter espaços vazios (tira a ordem das imagens)
+* justify-content: start; ajusta o conteúdo no eixo principal (horizontal)
+* align-content: center; ajusta o conteúdo no eixo paralelo (vertical)
+        * place-content: ; forma resumida
+* justify-items: stretch; ajusta o conteúdo dentro da celula no eixo horizontal (strech é o padrão - ocupar toda a celula)
+* align-items: stretch; ajusta o conteúdo dentro da celula no eixo vertical (strech é o padrão - ocupar toda a celula)
+        * place-items: ; forma resumida
+
+
+* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        * auto-fit: enquanto os elementos estiverem em mais de uma linha, ele trás os elementos para a primeira linha assim que a sobra é 100px. QUando todos estiverem na mesma linha, ele aumenta a largura até não ter mais sobras
+        * auto-fill:  trás os elementos para a 1ª igual o auto-fit, mas quando ela tiver preenchida e a sobra passa a caber mais um elemento, ela cria colunas vazias de 100px
+        - exemplo 10 
+
+
+
+
+
+
+
+
+
