@@ -1,0 +1,43 @@
+<!-- 
+Aula 03 :: Referenciando o Bootstrap em um Documento HTML
+https://www.youtube.com/watch?v=Ka16scuMc0c&feature=emb_imp_woyt
+
+> o atributo integrity e crossorigin das tgs link e script (de css e js) serve para garantir que
+ a origem do link arquivo de css e js é jenuína. Caso os arquivos entiverem em uma pasta local, esses
+ atributos não são necessários
+
+> Bootstrap por associação CDN é interessante quando for publicar o site em um servidor web real,
+possuem alta disponibilidade de banda e de serviço, ou seja, dificilmente ficam fora do ar e são 
+rápidos para enviar arquivos estáticos. Outra questão, quando o arquivo é baixado de seu site de 
+uma CDN, vc está poupando trafego no servidor do seu próprio site e hj em dia, muitos servidores 
+hospedagem possuem limitações de trafego. Se vc considerar um volume grande de acessos, isso pode 
+realmente fazer a diferença. Outro ponto é que como o bootstrap é altamente usado, caso o usuário 
+já tenha acessada um site com Bootstrap via CDN, os arquivos podem já ter sid baixado elo navegador
+do usuário e podem estar em cache reduzindo o tempo de carregamento do site
+> Bootstrap por associação local é interessante quando o site etá em construção. A vantagem é que se
+a internet cair enquanto estiver criando, o acesso ainda vai estar garantido. E caso o código precise
+de modificações, o ideal é estar local para consultar o css (lembrando que as modificações precisam 
+estar em um arquivo separado do bootstrap)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Associando o Bootstrap 5 ao Documento HTML</title>
+</head>
+<body>
+    <h1>Associando o Bootstrap 5 ao Documento HTML</h1>
+    <hr>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis iure sit veritatis eos eum, eligendi modi nemo porro magnam, debitis et, soluta sunt corporis voluptate! Veniam placeat perferendis quo, accusamus nisi quasi expedita odio at, officiis corporis praesentium, dolorum soluta eligendi non sed laudantium impedit quibusdam aliquam adipisci quisquam pariatur accusantium natus! Illo cupiditate eum excepturi reiciendis molestias, sunt ab temporibus dolore corporis animi velit eveniet in adipisci corrupti laudantium labore doloremque numquam odit veritatis blanditiis nesciunt placeat earum quas. Deleniti placeat laboriosam necessitatibus, quibusdam aperiam officiis alias hic officia cum provident debitis, optio doloribus ducimus nam voluptas recusandae aliquid.</p>
+    <h3><a href="../index.html">Voltar ao Início</a></h3>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
