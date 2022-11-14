@@ -1,0 +1,149 @@
+<!-- 
+Aula 08 :: Tipografia
+https://www.youtube.com/watch?v=dv8Nxf9apz8&t=7s
+
+
+> .h1 - .h6  : tem a aparencia de título (usado quando não quer usar o elemento <h1> à <h6>) - parágtafos com aspécto de título
+> .display-1 - display-6 : designer de título tb
+> .lead : formatação para texto
+> .text-center | .text-end : alinhamento do texto dentro da div
+> .list-unstyled: tira estilos da lista
+> .list-inline | .list-inline-item : usado para menus ul e li
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Tipografia</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>h1 - Título de Nível 1</h1>
+        <h2>h2 - Título de Nível 2</h2>
+        <h3>h3 - Título de Nível 3</h3>
+        <h4>h4 - Título de Nível 4</h4>
+        <h5>h5 - Título de Nível 5</h5>
+        <h6>h6 - Título de Nível 6</h6>
+    </div>
+    <hr>
+
+    <!-- div.containder>p.h${.h$ - Classe de Título de Nívem $}*6 -->
+    <div class="container">
+        <p class="h1">.h1 - Classe de Título de Nívem 1</p>
+        <p class="h2">.h2 - Classe de Título de Nívem 2</p>
+        <p class="h3">.h3 - Classe de Título de Nívem 3</p>
+        <p class="h4">.h4 - Classe de Título de Nívem 4</p>
+        <p class="h5">.h5 - Classe de Título de Nívem 5</p>
+        <p class="h6">.h6 - Classe de Título de Nívem 6</p>
+    </div>
+
+    <hr>
+    <!-- div.container>h1.display-${Display $} -->
+    <div class="container">
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
+    </div>
+
+    <hr>
+    <!-- div.container>h1.display-${Display $} -->
+    <div class="container">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque quos fugiat, nisi
+            consequatur
+            vitae iure nemo molestias labore accusamus sunt? Fuga iusto necessitatibus beatae accusamus eligendi
+            illum reiciendis. Magnam.</p>
+    </div>
+
+    <hr>
+    <div class="container">
+        <p class="">Texto em <mark>marcado</mark></p>
+        <p class="">Texto em <del>excluido</del></p>
+        <p class="">Texto em <s>riscado</s></p>
+        <p class="">Texto em <ins>Recém-inserido</ins></p>
+        <p class="">Texto em <u>sublinhado</u></p>
+        <p class="">Texto em <small>pequeno</small></p>
+        <p class="">Texto em <strong>encorpado</strong></p>
+        <p class="">Texto em <i>itálico</i></p>
+        <abbr title="Mongo, Express, React, Node">MERN </abbr>
+    </div>
+
+    <hr>
+    <div class="container">
+        <figure>
+            <blockquote class="blockquote" cite="Fulano de Tal">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita harum ipsam pariatur
+                    numquam ea maxime velit asperiores libero commodi consequuntur esse minima hic accusantium,
+                    quisquam voluptatibus, dolores nesciunt reprehenderit iure aliquam beatae ad! Iure asperiores
+                    maiores illum? Reiciendis, atque itaque?</p>
+                <figcaption class="blockquote-footer">
+                    <cite>Fulano Famoso</cite>, diretor de cinema
+                </figcaption>
+            </blockquote>
+        </figure>
+    </div>
+
+    <hr>
+    <div class="container">
+        <ul class="list-unstyled">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ul>
+
+        <hr>
+
+        <ul class="list-inline">
+            <li class="list-inline-item">Item 1</li>
+            <li class="list-inline-item">Item 2</li>
+            <li class="list-inline-item">Item 3</li>
+            <li class="list-inline-item">Item 4</li>
+            <li class="list-inline-item">Item 5</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- dl>(dt{Termo $}+dd{Descrição do termo $})*5 -->
+        <dl>
+            <dt>Termo 1</dt>
+            <dd>Descrição do termo 1</dd>
+            <dt>Termo 2</dt>
+            <dd>Descrição do termo 2</dd>
+            <dt>Termo 3</dt>
+            <dd>Descrição do termo 3</dd>
+            <dt>Termo 4</dt>
+            <dd>Descrição do termo 4</dd>
+            <dt>Termo 5</dt>
+            <dd>Descrição do termo 5</dd>
+        </dl>
+    </div>
+
+    <div class="container">
+        <h3 class="mt-5"><a href="../index.html">Voltar ao Início</a></h3>
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

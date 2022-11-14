@@ -1,13 +1,18 @@
 <!-- 
-Aula 07 :: Formatação de Colunas de LeiautePágina
+Aula 07 :: Formatação de Colunas de Leiaute
 https://www.youtube.com/watch?v=BILqPBsdJTA&feature=emb_imp_woyt
 
 DOC Bootstrap: 
 https://getbootstrap.com/docs/5.2/layout/grid/
 
-> .col: ocupa o espaço que tiver sobrando na linha de forma automática
+> .align-items-start: diminui as alturas das divs para caber somente o conteúdo, e alinha verticalmente em relação a div pai de acordo com o sufixo
+> .justify-content-center: Alinhamento horizontal em relação a div pai
+> .w-100: add quebra de linha entre as divs
+> .order-last: reorganiza a ordem da div (pode usar order-2)
+> .offset-2: adiciona duas colunas a direita da div
+> .ms-auto: margin start acrescenta uma margim automatica total ou dividida
+> .mx-auto: margin direita e esquerda automática
 -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,11 +25,14 @@ https://getbootstrap.com/docs/5.2/layout/grid/
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Formatação de Colunas de LeiautePágina</title>
     <style>
-        .h100 {
-            height: 100px;
+        .row {
+            height: 200px;
+            background-color: rgb(198, 216, 231);
         }
-        .h400 {
-            height: 400px;
+        .col-3{
+            background-color: antiquewhite;
+            padding: 20px;
+            border: solid 1px black;
         }
     </style>
 </head>
@@ -32,12 +40,12 @@ https://getbootstrap.com/docs/5.2/layout/grid/
 <body>
     
         <div class="container">
-            <div class="row">
-                <div class="col-12 bg-dark bg-opacity-50 h100"></div>
-                <div class="col-12 col-sm-3 bg-dark bg-opacity-75 h400"></div>
-                <div class="col-12 col-sm-9 bg-dark bg-opacity-25 h400"></div>
-                <div class="col-129 bg-dark bg-opacity-50 h100"></div>
-            </div>
+            <!-- <div class="row "> -->
+                <div class="col-3 ">DIV1</div>
+                <div class="col-3 ">DIV2</div>
+                <!-- <div class="col-3 ">DIV3</div> -->
+            <!-- </div> -->
+            <h3 class="mt-5"><a href="../index.html">Voltar ao Início</a></h3>
         </div>
    
     

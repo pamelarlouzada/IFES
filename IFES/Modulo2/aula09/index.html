@@ -1,0 +1,61 @@
+<!-- 
+Aula 09 :: Imagens e Figuras
+https://www.youtube.com/watch?v=VMV0xLCI9rw
+
+> .img-fluid: obedece tamanho do container. reduz de forma responsiva
+> .img-thumbnail : cria bordas com cantos levemente arredondados
+> .rounded : arredonda os cantos das imagens
+> .float-start: deixa o texto ao lado da imagem
+
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Imagens e Figuras</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- <img src="sun.png" alt="img" class="img-thumbnail rounded"> -->
+
+        <!-- img.img-thumbnail.float-start[src="quad.svg"]+p.lead -->
+        <img style="width: 100px;" src="sun.png" alt="" class="img-thumbnail float-start">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eligendi numquam animi aspernatur
+            odio modi praesentium. Sapiente, libero temporibus optio ipsa ipsam reiciendis quis cum saepe, et, ea
+            suscipit explicabo voluptatum? Obcaecati ipsum dolor sunt iusto quis minus esse est voluptatem ab harum, hic
+            molestiae velit facilis suscipit error! Sint magni quasi vitae ipsa, temporibus ab voluptates possimus
+            commodi optio ut dolor deleniti ex! Ipsa alias soluta, quos mollitia beatae quas quam eum, voluptates cumque
+            sint iusto temporibus architecto quae.</p>
+    </div>
+
+    <hr>
+    <div class="container text-cemter">
+        <figure class="figure">
+            <img style="width: 100px;" src="sun.png" alt="" class="img-fluid rounded">
+            <figcaption class="figcaption text-center">legenda da Figura</figcaption>
+        </figure>
+    </div>
+
+    <div class="container">
+        <h3 class="mt-5"><a href="../index.html">Voltar ao Início</a></h3>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
