@@ -25,27 +25,63 @@ https://www.youtube.com/watch?v=Y1VqI9j0sXQ
     <title>Cores e Opacidade </title>
 </head>
 
-<body>
+<body class="bg-light">
+
+    <style>
+        h2 {
+            padding-top: 2rem;
+        }
+    </style>
 
     <div class="container">
 
-    <h1>Cores e Opacidade</h1>
-    <p class="bg-primary bg-gradient">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-secondary bg-gradient">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-danger bg-opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="text-bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="text-bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
-    <p class="bg-transparent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sit minima in voluptates sapiente ipsa quaerat velit ducimus consequatur esse!</p>
+        <div class="cabecalho">
+            <h1 class="">Cores e Opacidade</h1>
+            <p class="d-inline-flex">Aula 11 :: </p><a class="d-inline-flex ms-2"
+                href="https://www.youtube.com/watch?v=Y1VqI9j0sXQ" target="_blank">Assistir no Youtube</a>
+            <hr>
+        </div>
 
+        <div class="conteudo">
+            <h2>Cor de fundo</h2>
+            <p>Os principais temas de cores são:</p>
+            <div class="justify-content-center">
+                <p class="text-bg-primary d-inline-flex p-3">.bg-primary</p>
+                <p class="text-bg-secondary d-inline-flex p-3">.bg-secondary</p>
+                <p class="text-bg-danger d-inline-flex p-3">.bg-danger</p>
+                <p class="text-bg-warning d-inline-flex p-3">.bg-warning</p>
+                <p class="text-bg-info d-inline-flex p-3">.bg-info</p>
+                <p class="text-bg-dark d-inline-flex p-3">.bg-dark</p>
+                <p class="bg-white d-inline-flex p-3">.bg-white</p>
+                <p class="text-bg-transparent d-inline-flex p-3">.bg-transparent</p>
+                <p class="text-bg-light d-inline-flex p-3">.bg-light</p>
+            </div>
+            
+            <h2>Gradiente de fundo</h2>
+            <p>Usa-se {.bg-gradient} na classe, em conjunto com a cor</p>
+            <div class="justify-content-center">
+                <p class="bg-primary bg-gradient text-white d-inline-flex p-3">.bg-gradient .bg-gradient</p>
+                <p class="bg-danger bg-gradient text-white d-inline-flex p-3">.bg-gradient .bg-danger</p>
+            </div>
+            
+            <h2>Cores de backgroud & Cor do texto</h2>
+            <p>Para ter contraste de cor de fundo com o texto, use o prefixo {.text-bg-{primary}}</p>
+            <div class="justify-content-center">
+                <p class="text-bg-primary d-inline-flex p-3">.text-bg-primary</p>
+                <p class="text-bg-danger d-inline-flex p-3">.text-bg-danger</p>
+                <p class="text-bg-dark d-inline-flex p-3">.text-bg-dark</p>
+            </div>
 
+            
 
-    <hr class="my-5 ">
-    <h3 class="mt-5">
-        <a class="link-danger" href="../index.html">Voltar ao Início</a></h3>
+        </div>
+
+        <div class="footer">
+            <hr class="my-5 ">
+            <h3 class="mt-5">
+                <a class="link-danger" href="../index.html">Voltar ao Início</a>
+            </h3>
+        </div>
     </div>
 
     <!-- JavaScript Bundle with Popper -->
