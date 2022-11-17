@@ -1,0 +1,84 @@
+<!-- 
+Resumo
+DOC 
+
+> .d-block : uma 'div' por linha
+> .d.inline : não configura a largura da coluna e nem a margem superior
+> .d-inline-block : fica em linha e respeita as configurações
+> .d-none e d-lg-block: esconde a div e só mostra quando tiver em tela lg
+    outra variação: d-lg-none
+(ex 1)
+> .d-print-none : a dv não sai na impressão
+> .d-print-block : para sair na impressao (coloca o d-none para não aparecer na tela mas sair na impressão)
+(ex2)
+> .invisible : some a div mas não some o espaço que ela ocupa 
+> .overflow-auto : acrescenta barra de rolagem onde é necessário no conteudo da div
+> .overflow-hidden : esconde o conteudo que ultrapassa a div
+> .overflow-visible : comportamento padrão - conteudo sai da div
+> .overflow-scroll : barra de rolagem x e y
+
+
+
+(ver aula 15 de HTML para saber mais sobre display)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        div.border {
+            height: 150px;
+        }
+    </style>
+    <title>Configurações de Visibilidade</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cabecalho">
+            <h1 class="">Configurações de Visibilidade</h1>
+            <p class="d-inline-flex">Aula 16 :: </p><a class="d-inline-flex ms-2"
+                href="https://www.youtube.com/watch?v=8GmtgLyEHv0&feature=emb_imp_woyt" target="_blank">Assistir no
+                Youtube</a>
+            <hr>
+        </div>
+
+        <div class="mt-3">
+            <div class="p-5 bg-danger"></div>
+            <div class="p-4 col-3 d-none d-lg-block d-inline-block m-3 bg-primary"></div>
+            <div class="p-4 col-3 d-block m-3 bg-success"></div>
+            <div class="p-4 col-3 d-block m-3 bg-warning"></div>
+        </div>
+        <a class="d-block mt-5 fs-5" href="exemplo1.html">Exemplo 1</a>
+        <a class="d-block fs-5" href="exemplo2.html">Exemplo 2</a>
+
+
+        <div class="footer">
+            <hr class="my-5 ">
+            <h3 class="mt-5">
+
+                <a class="link-danger" href="../index.html">Próxima Aula</a>
+            </h3>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
