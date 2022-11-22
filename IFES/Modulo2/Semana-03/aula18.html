@@ -1,0 +1,174 @@
+<!-- 
+Resumo
+DOC 
+
+> .form-control : para inputs
+> .form-label
+> .form-check : deve ser colocado na div do input
+> .form-check-input
+> .form-check-label
+> .btn .btn-primary
+> .form-control-{sm lg} : altera o tamanh do campo
+> .form-control-plaintext : campo parece um texto comum e ao clicar aparece a borda do input
+_____
+Atributos associados as classes do bootstrap
+
+> disable
+> readonly : quando combinado com o atributo value='', permite que o texto seja copiado
+> placeholder
+_____
+
+
+
+
+
+(ver aula 15 de HTML para saber mais sobre display)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div.border {
+            height: 150px;
+        }
+    </style>
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cabecalho">
+            <h1 class="">Formulários</h1>
+            <p class="d-inline-flex">Aula 18 :: </p>
+            <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=YAT_lkd09XU&feature=emb_imp_woyt" target="_blank">Assistir no Youtube</a> ::
+            <a class="d-inline-flex" href="https://getbootstrap.com/docs/5.1/forms/overview/" target="_blank">DOC1</a> ::
+            <a class="d-inline-flex" href="hhttps://getbootstrap.com/docs/5.1/forms/form-control/" target="_blank">DOC21</a>
+            <hr>
+        </div>
+
+        <h2>Resumo</h2>
+        <p><code>.form-control</code> é usado para input <code class="tx-html">&lt;input class="form-control" type="email" id="email"></code></p>
+        <p><code>.form-label</code> é usado em label <code class="tx-html">&lt;label class="form-label" for="email">E-mail&lt;/label></code></p>
+        <p><code>.form-text</code> é usado em textos de ajuda/erro <code class="tx-html">&lt;div class="form-text">Seu email não será compartilhado&lt;/div></code></p>
+        <p><code>.form-chek</code> deve ser usado na div do checkbox (ele dá o espaçamento entre o checkbox e o texto) <code class="tx-html">&lt;div class="mb-3 form-check"></code></p>
+        <p><code>.form-chek-input</code> usado no input <code class="tx-html">&lt;input class="form-check-input" type="checkbox" id="lembrar"></code></p>
+        <p><code>.form-chek-label</code> usado na label <code class="tx-html">&lt;label class="form-check-label" for="lembrar">Lembrar senha&lt;/label></code></p>
+        <p><code>.btn .btn-primary</code> usado nos botões <code class="tx-html">&lt;button class="btn btn-primary" type="submit">Entrar&lt;/button></code></p>
+
+        <!-- form>(div>(label+input+div))*3 -->
+        <form action="" class="p-5 border rounded">
+            <div class="mb-3">
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-control" type="email" id="email">
+                <div class="form-text">Seu email não será compartilhado</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="senha">Senha</label>
+                <input class="form-control" type="text" id="senha">
+            </div>
+            <div class="mb-3 form-check">
+                <input class="form-check-input" type="checkbox" id="lembrar">
+                <label class="form-check-label" for="lembrar">Lembrar senha</label>
+            </div>
+            <button class="btn btn-primary" type="submit">Entrar</button>
+        </form>
+
+        <h2>Atributos combinados com Bootstrap</h2>
+        <p>O bootstrap também possui formatação para elementos do HTML quando uma classe está declarada. Esses atributos são: <code>[disable] [readonly] [placeholder=""]</code></p>
+        <p>O <code>[readonly]</code> quando combinado com o atributo <code>[value='']</code>, permite que o texto seja copiado</p>
+        
+        <h2>Sizing</h2>
+        <p>Defina alturas usando classes como <code>.form-control-lg</code> e  <code>.form-control-sm</code>.</p>
+        <div class="g-3"><input class="form-control form-control-lg" type="text" placeholder=".form-control .form-control-lg">
+            <input class="form-control my-2" type="text" placeholder="Default input">
+            <input class="form-control form-control-sm" type="text" placeholder=".form-control .form-control-sm">
+        </div>
+
+        <h2>Disabled e Readonly</h2>
+        <p>Adicione o atributo <code>disabled</code> em um input para dar a ela uma aparência esmaecida e remover eventos de ponteiro do mouse.</p>
+        <p>Adicione o atributo <code>readonly</code> em um input para impedir a modificação do valor da entrada.</p>
+        <div class="">
+            <input class="form-control" type="text" placeholder="Disabled input" disabled>
+            <input class="form-control my-2" type="text" value="Disabled readonly input" disabled readonly>
+            <input class="form-control" type="text" value="Readonly input here..." readonly>
+        </div>
+
+        <h2>Readonly plain text</h2>
+        <p>Se você deseja ter <code>&lt;input readonly></code> em seu formulário estilizados como texto simples, use a class <code>.form-control-plaintext</code>  para remover o estilo padrão do campo de formulário e preservar a margem e o preenchimento corretos.</p>
+        <div class="p-5 border rounded">
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <hr> -->
+        <h2>Outros forms</h2>
+        <p>Veja a aplicação da classe <code>.form-control-{color}</code>  em outros inputs: 
+            Para arquivos <code class="tx-html">&lt;input type="file" name="" id="" class="form-control"></code> 
+            Para cores <code class="tx-html">&lt;input type="color" name="" id="" class="form-control"></code></p>
+
+        <input type="file" name="" id="arquivo" class="form-control">
+        <input type="color" name="" id="" class="form-control mt-3">
+
+        <hr>
+
+        <!-- div.mb-3>(label.form-label{Cidade}+input.form-control[placeholder="Digite para buscar"]) -->
+        <h2>Outros forms</h2>
+        <p>Outro exemplo do <code>.form-control</code> aplicado ao <code class="tx-html">&lt;datalist></code></p>
+        <div class="mb-3">
+            <label for="" class="form-label">Cidade</label>
+            <input type="text" class="form-control" placeholder="Digite para buscar"
+            list="cidades">
+            <datalist id="cidades">
+                <option value="Cidade 1"></option>
+                <option value="Cidade 2"></option>
+                <option value="Cidade 3"></option>
+                <option value="Cidade 4"></option>
+                <option value="Cidade 5"></option>
+                <option value="Cidade 6"></option>
+            </datalist>
+        </div>
+
+        <!-- <a class="d-block mt-5 fs-5" href="exemplo1.html">Exemplo 1</a>
+        <a class="d-block fs-5" href="exemplo2.html">Exemplo 2</a> -->
+
+
+        <div class="footer">
+            <hr class="my-5 ">
+            <h3 class="mt-5">
+
+                <a class="link-danger" href="../../modulo02.html">Sumário</a>
+            </h3>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
