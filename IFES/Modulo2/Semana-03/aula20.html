@@ -17,12 +17,8 @@ Resumo
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
-    <style>
-        div.border {
-            height: 150px;
-        }
-    </style>
-    <title>Select, Range e Botões</title>
+    
+    <title>Campos de Checagem</title>
 </head>
 
 <body>
@@ -30,99 +26,146 @@ Resumo
     <div class="container">
 
         <div class="cabecalho">
-            <h1 class="">Select, Range e Botões</h1>
-            <p class="d-inline-flex">Aula 19 :: </p>
-            <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=0fN996F5YLA&feature=emb_imp_woyt"
+            <h1 class="">Campos de Checagem</h1>
+            <p class="d-inline-flex">Aula 20 :: </p>
+            <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=2vLPmimdH4o&feature=emb_imp_woyt"
                 target="_blank">Assistir no Youtube</a> ::
-            <a class="d-inline-flex " href="https://getbootstrap.com/docs/5.1/forms/overview/" target="_blank">DOC Select</a> ::
-            <a class="d-inline-flex " href="https://getbootstrap.com/docs/5.2/forms/range/" target="_blank">DOC Range</a> ::
-            <a class="d-inline-flex " href="https://getbootstrap.com/docs/5.2/components/buttons/" target="_blank">DOC Button</a>
+            <a class="d-inline-flex " href="https://getbootstrap.com/docs/5.2/forms/checks-radios/" target="_blank">DOC</a>
             <hr>
         </div>
 
-        <h2>Resumo</h2>
-        <p>Os menus personalizados precisam apenas de uma classe personalizada <code>.form-select</code> para acionar os
-            estilos
-            personalizados. Os estilos personalizados são limitados à &lt;select> aparência inicial do e não podem
-            modificar
-            os &lt;option>s devido a limitações do navegador.</p>
+        <h2>Checkbox</h2>
+        <p><code>.form-check</code> dentro da div: <code class="tx-html">&lt;div class="form-check"></code></p>
+        <p><code>.form-check-input</code> no input: <code class="tx-html">&lt;input class="form-check-input" type="checkbox" id="ex01"></code></p>
+        <p><code>.form-check-label</code> na label: <code class="tx-html">&lt;label class="form-check-label" for="ex01"> Exemplo de checkbox </label></code></p>
 
-        <select class="form-select">
-            <option selected>.form-select</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-        </select>
+        <div class="form-check p-5 border rounded">
+            <input class="form-check-input" type="checkbox" value="" id="ex01">
+            <label class="form-check-label" for="ex01"> Exemplo de checkbox </label>
+        </div>
 
-        <h2>Sizing</h2>
-        <p>Você também pode escolher entre seleções personalizadas pequenas e grandes para corresponder às nossas
-            entradas de texto de tamanho semelhante.</p>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-            <option selected>.form-select .form-select-lg</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-        </select>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>.form-select .form-select-sm</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-        </select>
+        <hr>
+        <h2>Radio</h2>
+        <p>Basta mudar o type para radio <code class="tx-html">&lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="ex04"></code></p>
+        <p>Lebrando que para selecionar uma opção, os <code>inputs</code> precisam ter o mesmo <code>name</code>. Também é preciso definir um <code>value</code> par ser enviado ao servidor</p>
+        <div class="p-5 border rounded">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+              </div>
+        </div>
 
-        <h2>Atributos</h2>
-        <p>O atributo <code>[multiple]</code> mostra todas as opções do select e com o atributo <code>[size="3"]</code> vc consegue indicar qauntas opções quer mostrar. 
-        Já o <code>[disable]</code> desativa a opção de escolha. <code class="tx-html">&lt;select class="form-select form-select-lg" name="" id="" multiple size="3" disabled></select></code> </p>
-        <!-- div.mb-3>label{Opção Desejada}+select>option{Opção $}*6 -->
-        <div class="mb-3 ">
-            <label class="form-label" for="">Opção Desejada</label>
-            <div class="col-4">
-                <select class="form-select form-select-lg" name="" id="" multiple size="3" disabled>
-                    <option value="">Opção 1</option>
-                    <option value="">Opção 2</option>
-                    <option value="">Opção 3</option>
-                    <option value="">Opção 4</oboa tarde ption>
-                    <option value="">Opção 5</option>
-                    <option value="">Opção 6</option>
-                </select>
+        <hr>
+        <h2>Switches</h2>
+        <p><code>.form-switch</code> dentro da div: <code class="tx-html">&lt;div class="form-check form-switch"></code></p>
+        
+        <div class="p-5 border rounded">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="ex05">
+                <label class="form-check-label" for="ex05">Sem atributo</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="ex06" checked>
+                <label class="form-check-label" for="ex06">Atributo checked</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="ex07" disabled>
+                <label class="form-check-label" for="ex07">Atributo disabled</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="ex08" checked disabled>
+                <label class="form-check-label" for="ex08">Atributo disabled e checked</label>
             </div>
         </div>
+
         <hr>
-
-        <h2>Range</h2>
-        <p>Crie <code class="html">&lt;input type="range"></code> controles personalizados com 
-            <code>.form-range</code>. A faixa (o plano de fundo) e o ponteiro (o valor) são estilizados para parecerem iguais em todos os navegadores. 
-            Como apenas o Firefox suporta o “preenchimento” de sua trilha da esquerda ou direita do ponteiro como um meio de indicar visualmente o progresso, atualmente não há suporte.</p>
-
-        <div class="mb-3">
-            <label for="exRange" class="form-label">Examplo range</label>
-            <input type="range" class="form-range" id="exRange" min="1" max="5" step="1" value="4">    
+        <h2>Atributos</h2>
+        <p><code>[disabled]</code> Desabilita o campo <code class="tx-html">&lt;input class="form-check-input" type="checkbox" value="" id="ex02" disabled></code></p>     
+        <p><code>[disabled] [checked]</code> Desabilita o campo marcado <code class="tx-html">&lt;input class="form-check-input" type="checkbox" value="" id="ex03" checked disabled></code></p>     
+        
+        <div class="form-check p-5 border rounded">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="ex02" disabled>
+                <label class="form-check-label" for="ex02"> Disabled checkbox </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+                <label class="form-check-label" for="flexCheckCheckedDisabled">Disabled checked checkbox</label>
+            </div>
         </div>
 
-        <p>Exemplo: <code class="tx-html">&lt;input type="range" class="form-range" id="exRange" min="1" max="5" step="1" value="4"></code></p>
-        <p>Obs: também é possível usar o <code>[disable]</code></p>
+        <hr>
+        <h2>Design - Inline </h2>
+        <p><code> .form-check .form-check-inline</code> para deixar os inputs em linha <code class="tx-html">&lt;div class="form-check form-check-inline"> </code></p>     
+        
+        <div class="form-check p-5 border rounded">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+              </div>
+        </div>
 
         <hr>
-        <h2>Botões</h2>
-        <a class="btn btn-primary" href="#" role="button">Link</a>
-        <button class="btn btn-primary" type="submit">Button</button>
-        <input class="btn btn-primary" type="button" value="Input">
+        <h2>Design - Reverse </h2>
+        <p><code>.form-check .form-check-reverse</code> para deixar alinhadoa direita <code class="tx-html">&lt;div class="form-check form-check-reverse"> </code></p>     
+        
+        <div class="form-check p-5 border rounded">
+            <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+                <label class="form-check-label" for="reverseCheck1">
+                  Reverse checkbox
+                </label>
+              </div>
+              <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+                <label class="form-check-label" for="reverseCheck2">
+                  Disabled reverse checkbox
+                </label>
+              </div>
+              
+              <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+              </div>
+        </div>
 
-        <button type="button" class="btn btn-outline-primary" data-bs-toggle="button">[data-bs-toggle="button]</button>
-        <button type="button" class="btn btn-outline-primary">.btn .btn-outline-primary</button>
-        <button type="button" class="btn btn-primary btn-lg my-3">.btn .btn-primary .btn-lg</button>
-        <button type="button" class="btn btn-primary btn-sm">.btn .btn-primary .btn-sm</button>
-        <button type="button" class="btn btn-primary"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-          Botão personalizado
-        </button>
-        <button type="button" class="btn btn-secondary" disabled>[disabled]</button>
-        <a class="btn btn-primary disabled" role="button" aria-disabled="true">Link desativado</a>
+        <hr>
+        <h2>Toggle buttons</h2>
+        <p>Diferentes variantes de .btn, como nos vários estilos delineados, são suportadas.</p>     
+        
+        <div class="p-5 border rounded ">
+            <div class="my-2">
+                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label>
+            </div>
+            <div class="my-2">
+                <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+            </div>
 
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary my-3" type="button">div.d-grid.gap-2>button.btn.btn-primary</button>
-          </div>
+            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
 
+            <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+        </div>
 
-
-          <hr>
         <div class="footer">
             <hr class="my-5">
             <h3 class="mt-5">
