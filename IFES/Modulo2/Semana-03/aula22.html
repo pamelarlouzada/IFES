@@ -37,56 +37,259 @@ Resumo
         </div>
 
         <h2>Resumo</h2>
-        <p>Crie rótulos de formulário simples que flutuem sobre seus campos de entrada. Para isso,
-            faça uma <code class="tx-html">&lt;div class="<code>form-floating</code>"></code> depois acrescente
-            um <code class="tx-html">&lt;input class="<code>form-control</code>"></code> seguido de uma
-            <code>label</code>
-        </p>
-        <p>Se colocar um <code>[placeholder=" "]</code> com um espaço, o título vai para o meio do input</p>
+        <p>Adicione complementos nos formularios com <code>.input-group</code> e <code>.input-group-text</code></p>
+        <p>Faça uma <code>div.input-group</code>, e dentro dela coloque um <code>span.input-group-text</code> e um
+            <code>input.form-control</code>:</p>
 
-        <div class="form-floating my-2">
-            <input type="email" name="" id="email" class="form-control">
-            <label for="email" class="form-label">E-mail</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Username">
         </div>
-        <div class="form-floating">
-            <input type="email" name="" id="email" class="form-control" placeholder=" ">
-            <label for="email" class="form-label">E-mail</label>
+
+        <div class="bg-light py-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;span class="input-group-text">@&lt;/span>
+        &lt;input type="text" class="form-control" placeholder="Username">
+    &lt;/div>
+</pre>
+        </div><br>
+        <p>Para o campo receber foco (clicar no nome e ir para o input), basta trocar o <code>span</code> por <code>label</code> com o atributo <code>[for]</code>.</p>
+        <div class="input-group mb-3">
+            <label for="nome" class="input-group-text">Nome</label>
+            <input type="text" id="nome" class="form-control" placeholder="Username">
+        </div>
+
+        <div class="bg-light py-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;label for="nome" class="input-group-text">@&lt;/label>
+        &lt;input type="text" id="nome" class="form-control" placeholder="Username">
+    &lt;/div>
+</pre>
         </div>
         <br>
-        <p>Defina um <code>[value="test@example.com"]</code></p>
-        <form class="form-floating">
-            <input type="email" class="form-control" id="floatingInputValue" value="test@example.com">
-            <label for="floatingInputValue">Título ajusta automaticamente</label>
-        </form>
-        <br>
-        <p>Acrescente validações com a class <code>.is-invalid</code> no <code>input</code></p>
-        <form class="form-floating">
-            <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com"
-                value="test@example.com">
-            <label for="floatingInputInvalid">Invalid input</label>
-        </form>
+        <p>Outros exemplos:</p>
+        
+        
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="coloque o &lt;inputs> antes do &lt;span>" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+          </div>
 
-        <h2>Textareas</h2>
-        <p>Use uma <code class="tx-html">&lt;textarea class="<code>form-floating</code>"></code> depois acrescente uma <code class="tx-html">&lt;div class="<code>form-control</code>"></code>
-        e complete uma uma <code class="tx-html">&lt;label></code></p>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here"style="height: 100px" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Mensagem</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">R$</span>
+            <input type="text" class="form-control" placeholder="&lt;span> &lt;input> &lt;span>">
+            <span class="input-group-text">,00</span>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control text-end" placeholder="&lt;input>" >
+            <span class="input-group-text">&lt;span></span>
+            <input type="text" class="form-control" placeholder="&lt;input>">
+          </div>
+
+          <div class="input-group mb-3 input-group-sm">
+            <span class="input-group-text">With textarea</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Nome Completo</span>
+            <input type="text" placeholder="Primeiro Nome" aria-label="First name" class="form-control">
+            <input type="text" placeholder="Último Nome" aria-label="Last name" class="form-control">
+          </div>
+
+          <div class="bg-light py-3 mb-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;input type="text" class="form-control" placeholder="emai">
+        &lt;span class="input-group-text" id="basic-addon2">@example.com&lt;/span>
+    &lt;/div>  
+    &lt;div class="input-group mb-3">
+        &lt;span class="input-group-text">R$&lt;/span>
+        &lt;input type="text" class="form-control" placeholder="Digite o valor">
+        &lt;span class="input-group-text">,00&lt;/span>
+    &lt;/div>  
+    &lt;div class="input-group mb-3">
+        &lt;input type="text" class="form-control text-end" placeholder="email" >
+        &lt;span class="input-group-text">@&lt;/span>
+        &lt;input type="text" class="form-control" placeholder="gmail.com">
+    &lt;/div>  
+    &lt;div class="input-group mb-3 input-group-sm">
+        &lt;span class="input-group-text">With textarea&lt;/span>
+        &lt;textarea class="form-control" aria-label="With textarea">&lt;/textarea>
+    &lt;/div>
+    &lt;div class="input-group">
+        &lt;span class="input-group-text">First and last name&lt;/span>
+        &lt;input type="text" class="form-control">
+        &lt;input type="text" class="form-control">
+    &lt;/div>
+</pre>
+
+          </div>
+
+          <h2>Checkbox e Radio</h2>
+          <p>Adicione <code>.mt-0</code> ao <code>input.form-check</code></p>
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with checkbox">
+          </div>
+          
+          <div class="input-group">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with radio button">
+          </div>
+
+          <div class="bg-light py-3 my-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;div class="input-group-text">
+          &lt;input class="form-check-input mt-0" type="checkbox" value="">
+        &lt;/div>
+        &lt;input type="text" class="form-control">
+    &lt;/div>
+      
+    &lt;div class="input-group">
+        &lt;div class="input-group-text">
+          &lt;input class="form-check-input mt-0" type="radio" value="">
+        &lt;/div>
+        &lt;input type="text" class="form-control">
+    &lt;/div>
+</pre>
+
+          </div>
+                   
+          
+
+        <h2>Sizing</h2>
+        <p>Adicione <code>. input-group-{sm lg}</code> ao <code>.input-group</code></p>
+        <p>O dimensionamento dos elementos individuais do grupo de entrada não é suportado.</p>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+          
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
         </div>
 
-        <h2>Select</h2>
-        <p>Use uma <code class="tx-html">&lt;textarea class="<code>form-floating</code>"></code> depois acrescente uma <code class="tx-html">&lt;select class="<code>form-select</code>"></code>
-        e complete uma uma <code class="tx-html">&lt;label></code></p>
-        <p>Não funciona com size</p>
-        <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <label for="floatingSelect">Works with selects</label>
-        </div>
+        <div class="bg-light py-3 my-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;span class="input-group-text" id="ex">Default&lt;/span>
+        &lt;input type="text" class="form-control">
+    &lt;/div>
+      
+    &lt;div class="input-group input-group-lg">
+        &lt;span class="input-group-text" id="ex">Large&lt;/span>
+        &lt;input type="text" class="form-control">
+    &lt;/div>
+</pre>            
+            </div>
+
+        <h2>Botões</h2>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+          </div>
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+          </div>
+          
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button">Button</button>
+            <button class="btn btn-outline-secondary" type="button">Button</button>
+            <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
+          </div>
+          
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
+            <button class="btn btn-outline-secondary" type="button">Button</button>
+            <button class="btn btn-outline-secondary" type="button">Button</button>
+          </div>
+
+          <div class="bg-light py-3 my-3 border rounded">
+<pre>
+    &lt;div class="input-group mb-3">
+        &lt;button class="btn btn-outline-secondary" type="button" id="btn1">Button&lt;/button>
+        &lt;input type="text" class="form-control" placeholder="" >
+    &lt;/div>
+    
+    &lt;div class="input-group mb-3">
+        &lt;input type="text" class="form-control" placeholder="Recipient's username">
+        &lt;button class="btn btn-outline-secondary" type="button" id="btn2">Button&lt;/button>
+    &lt;/div>
+    
+    &lt;div class="input-group mb-3">
+        &lt;button class="btn btn-outline-secondary" type="button">Button&lt;/button>
+        &lt;button class="btn btn-outline-secondary" type="button">Button&lt;/button>
+        &lt;input type="text" class="form-control" placeholder="">
+    &lt;/div>
+    
+    &lt;div class="input-group">
+        &lt;input type="text" class="form-control" placeholder="Recipient's username">
+        &lt;button class="btn btn-outline-secondary" type="button">Button&lt;/button>
+        &lt;button class="btn btn-outline-secondary" type="button">Button&lt;/button>
+    &lt;/div>
+</pre>            
+            </div>
+
+            <h2>Select</h2>
+            <div class="input-group mb-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+              </div>
+              
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+              
+              <div class="input-group">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action before</a></li>
+                  <li><a class="dropdown-item" href="#">Another action before</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+                <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
 
         <div class="footer">
             <hr class="my-5">
