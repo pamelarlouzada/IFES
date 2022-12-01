@@ -8,114 +8,143 @@ Resumo
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS only -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
 
-    <title>Validação de Formulários</title>
+  <title>Validação de Formulários</title>
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <div class="cabecalho">
-            <h1 class="">Validação de Formulários</h1>
-            <p class="d-inline-flex">Aula 24 :: </p>
-            <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=e7ZgdFcKsoI&feature=emb_imp_woyt"
-                target="_blank">Assistir no Youtube</a> ::
-            <a class="d-inline-flex" href="https://getbootstrap.com/docs/5.2/forms/validation/"
-                target="_blank">DOC</a>
-            <hr>
-        </div>
-
-        <h2>Resumo</h2>
-        <p><code>.needs-validation</code>: colocar no elemtno <code>&lt;form></code>
-        </p>
-
-       
-
-        <h2>Exemplo</h2>
-        <div class="p-5 border rounded">
-          <h3 class="display-6">Endereço</h3>
-          <hr>
-          <form>
-            <div class="row mb-3 g-3">
-              <div class="col-7">
-                <label for="logradouro" class="form-label">Logradouro</label>
-                <input type="text" class="form-control" id="logradouro" required>
-              </div>
-
-              <div class="col-2">
-                <label for="numero" class="form-label">Número</label>
-                <input type="text" class="form-control" id="numero">
-              </div>
-
-              <div class="col-3">
-                <label for="complemento" class="form-label">Complemento</label>
-                <input type="text" class="form-control" id="complemento">
-              </div>
-
-              <div class="col-6">
-                <label for="bairro" class="form-label">Bairro</label>
-                <input type="text" class="form-control" id="bairro">
-              </div>
-
-              <div class="col-6">
-                <label for="cidade" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="cidade">
-              </div>
-
-              <div class="col-6">
-                <label for="estado" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="estado">
-              </div>
-
-              <div class="col-2">
-                <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" pattern="[0-9]{8}" required>
-              </div>
-
-              <div class="col-4">
-                <label for="telefone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="telefone">
-              </div>
-
-              <div class="col-12">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="termos">
-                  <label for="termos" class="form-check-label">Concordo com os termos e condições</label>
-                </div>
-              </div>
-
-
-
-            </div>
-
-            <button class="btn btn-primary">Cadastrar</button>
-          </form>
-        </div>
-
-        <div class="footer">
-            <hr class="my-5">
-            <h3 class="my-5">
-                <a class="link-danger" href="../../modulo02.html">Sumário</a>
-            </h3>
-        </div>
-
+    <div class="cabecalho">
+      <h1 class="">Validação de Formulários</h1>
+      <p class="d-inline-flex">Aula 24 :: </p>
+      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=e7ZgdFcKsoI&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a> ::
+      <a class="d-inline-flex" href="https://getbootstrap.com/docs/5.2/forms/validation/" target="_blank">DOC</a>
+      <hr>
     </div>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <h2>Resumo</h2>
+    <p><code>.needs-validation</code>: colocar no elemtno <code>&lt;form></code> e para ativar essa class é
+      preciso acrescentar o atributo <code>[novalidation]</code> no &lt;form> isso dasativara as validações padrões.
+    </p>
+    <p>Crie uma div com a class<code>.invalid-feedback</code> ou <code>.valid-feedback</code> após o input
+    para escrever uma mensagem de erro ou validação. Essa validação é feira apenas no navegador, então qualquer usuário
+  consegue burlar facilmente. Por isso as validações precisam ser feitas no servidor</p> 
+    <p>Classes de servidor: <code>.is-valid .is-invalid</code></p>
+
+
+    <h2>Exemplo</h2>
+    <div class="p-5 border rounded">
+      <h3 class="display-6">Endereço</h3>
+      <hr>
+      <form method="post" class="needs-validation" novalidate>
+        <div class="row mb-3 g-3">
+          <div class="col-7">
+            <label for="logradouro" class="form-label">Logradouro</label>
+            <input type="text" class="form-control" id="logradouro" required>
+            <div class="invalid-feedback">
+              Você deve informar o logradouro
+            </div>
+            <div class="valid-feedback">
+              logradouro informado corretamente
+            </div>
+          </div>
+          <div class="col-2">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" class="form-control" id="numero">
+          </div>
+
+          <div class="col-3">
+            <label for="complemento" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento">
+          </div>
+
+          <div class="col-6">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro">
+          </div>
+
+          <div class="col-6">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade">
+          </div>
+
+          <div class="col-6">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="estado">
+          </div>
+
+          <div class="col-2">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" pattern="[0-9]{8}" required>
+          </div>
+
+          <div class="col-4">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone">
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="termos">
+              <label for="termos" class="form-check-label">Concordo com os termos e condições</label>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <button class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo02.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
 
 </body>
 
