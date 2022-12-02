@@ -1,0 +1,115 @@
+<!-- 
+Resumo
+
+> .
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+
+    <title>Barras de Navegação</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cabecalho">
+            <h1 class="">Barras de Navegação</h1>
+            <p class="d-inline-flex">Aula 24 :: </p>
+            <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=7FX6YMx_V5M&feature=emb_imp_woyt"
+                target="_blank">Assistir no Youtube</a> ::
+            <a class="d-inline-flex" href="https://getbootstrap.com/docs/5.2/components/navbar/" target="_blank">DOC</a>
+            <hr>
+        </div>
+
+        <h2>Resumo</h2>
+        <p>Navbars requerem um encapsulamento para classes <code>.navbar</code></p>
+        <p>As barras de navegação e seus conteúdos são fluidos por padrão. Altere o <code>.container</code> para limitar
+            sua largura horizontal de maneiras diferentes.</p>
+        <p>Use nossas classes de utilitários de espaçamento (<code>.me-auto</code>) e flexibilidade
+            (<code>.d-flex</code>)para controlar o espaçamento e o alinhamento nas barras de navegação.</p>
+        <p>As barras de navegação são responsivas por padrão, mas você pode modificá-las facilmente. O comportamento
+            responsivo depende do nosso plug-in Collapse JavaScript.</p>
+        <h2>Exemplo</h2>
+        <div class="p-5 border rounded">
+            <nav class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
+                <div class="container">
+                    <a href="" class="navbar-brand d-flex align-items-center">
+                        <i class="bi-bootstrap-fill fs-1 me-2"></i>
+                        Bootstrap 5</a>
+                    <!-- <span class="navbar-text me-auto">Curso Completo</span> -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuNavbar">
+                        <div class="navbar-nav ms-auto">
+                            <a href="#" class="nav-link active">Principal</a>
+                            <div class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produtos</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a href="#" class="dropdown-item">Produto</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">Produto</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item">Produto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <a href="#" class="nav-link">Menu 3</a> -->
+                            <!-- <a href="#" class="nav-link disabled">Menu 4</a> -->
+                        </div>
+                    </div>
+                    <!-- <form action="" class="d-flex">
+                        <div class="input-group">
+                            <input type="search" name="" id="" class="form-control" placeholder="Buscar...">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </div>
+                    </form> -->
+                </div>
+            </nav>
+            <div class="container mt-3">
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit natus et nisi non quibusdam, a dolores laudantium voluptatem. Repellendus vitae voluptate, ducimus assumenda quae ullam atque iure fuga sapiente repellat facilis quibusdam deleniti tenetur id praesentium nisi suscipit veritatis! Totam voluptatum ab praesentium mollitia eos. Iure at ullam saepe! Quasi iusto, voluptatum labore alias doloribus fugit provident facere eius voluptatibus iure soluta officia dolor laborum magnam debitis quae assumenda qui. Voluptatibus eaque eius ipsa excepturi molestiae nam, similique, velit aut totam est ad vitae magnam suscipit nobis optio dicta amet animi. Consequuntur nisi quos expedita optio quas sint?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit natus et nisi non quibusdam, a dolores laudantium voluptatem. Repellendus vitae voluptate, ducimus assumenda quae ullam atque iure fuga sapiente repellat facilis quibusdam deleniti tenetur id praesentium nisi suscipit veritatis! Totam voluptatum ab praesentium mollitia eos. Iure at ullam saepe! Quasi iusto, voluptatum labore alias doloribus fugit provident facere eius voluptatibus iure soluta officia dolor laborum magnam debitis quae assumenda qui. Voluptatibus eaque eius ipsa excepturi molestiae nam, similique, velit aut totam est ad vitae magnam suscipit nobis optio dicta amet animi. Consequuntur nisi quos expedita optio quas sint?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit natus et nisi non quibusdam, a dolores laudantium voluptatem. Repellendus vitae voluptate, ducimus assumenda quae ullam atque iure fuga sapiente repellat facilis quibusdam deleniti tenetur id praesentium nisi suscipit veritatis! Totam voluptatum ab praesentium mollitia eos. Iure at ullam saepe! Quasi iusto, voluptatum labore alias doloribus fugit provident facere eius voluptatibus iure soluta officia dolor laborum magnam debitis quae assumenda qui. Voluptatibus eaque eius ipsa excepturi molestiae nam, similique, velit aut totam est ad vitae magnam suscipit nobis optio dicta amet animi. Consequuntur nisi quos expedita optio quas sint?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit natus et nisi non quibusdam, a dolores laudantium voluptatem. Repellendus vitae voluptate, ducimus assumenda quae ullam atque iure fuga sapiente repellat facilis quibusdam deleniti tenetur id praesentium nisi suscipit veritatis! Totam voluptatum ab praesentium mollitia eos. Iure at ullam saepe! Quasi iusto, voluptatum labore alias doloribus fugit provident facere eius voluptatibus iure soluta officia dolor laborum magnam debitis quae assumenda qui. Voluptatibus eaque eius ipsa excepturi molestiae nam, similique, velit aut totam est ad vitae magnam suscipit nobis optio dicta amet animi. Consequuntur nisi quos expedita optio quas sint?</p>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat velit natus et nisi non quibusdam, a dolores laudantium voluptatem. Repellendus vitae voluptate, ducimus assumenda quae ullam atque iure fuga sapiente repellat facilis quibusdam deleniti tenetur id praesentium nisi suscipit veritatis! Totam voluptatum ab praesentium mollitia eos. Iure at ullam saepe! Quasi iusto, voluptatum labore alias doloribus fugit provident facere eius voluptatibus iure soluta officia dolor laborum magnam debitis quae assumenda qui. Voluptatibus eaque eius ipsa excepturi molestiae nam, similique, velit aut totam est ad vitae magnam suscipit nobis optio dicta amet animi. Consequuntur nisi quos expedita optio quas sint?</p>
+            </div>
+
+            <footer class="p-4 bg-dark text-light text-center sticky-bottom">
+                <!-- fixed bottom -->
+                Totos os direitos reservados</footer>
+        </div>
+
+        <div class="footer">
+            <hr class="my-5">
+            <h3 class="my-5">
+                <a class="link-danger" href="../../modulo02.html">Sumário</a>
+            </h3>
+        </div>
+
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
