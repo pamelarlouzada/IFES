@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>Sintaxe</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">Sintaxe</h1>
+      <p class="d-inline-flex">Aula 03 :: </p>
+      <a class="d-inline-flex ms-2" href="https://youtu.be/TZMhMQ1XdFM"
+        target="_blank">Assistir no Youtube</a> 
+      <hr>
+    </div>
+
+   
+    <h2>Palavras Chaves</h2>
+    <p><strong>Palavras Chaves</strong> são palavras reservadas que não podem ser usadas como nomes de identificadores. O ambiente de desenvolvimento destaca essas palavras para auxílio.</p>
+   
+    <h2>Instruções</h2>
+    <p>Uma <strong>instrução</strong> é usada para realizar uma tarefa ou um grupo de tarefas</p>
+    <p>Uma tarefa pode ser qualquer coisa com realizar operações aritiméticas, verificar se dois números são iguais, etc. 
+      <strong>Geralmente</strong>, uma instrução está presente em <strong>uma linha</strong>.
+    </p>  
+
+    <div class="bg-light py-3 border rounded">
+<pre>
+  1   pais = "Brasil";                      | instrução de atribuição
+  2   console.log("Exemplo de Saída");      | instrução de saída
+  3   produto = 5.86 * 82.41;               | instrução de multiplicação
+  4   vendido = true;                       | instrução de atribuição
+
+  ** Instrução se refere a finalidade da linha de comando
+</pre>
+    </div>
+
+    <p class="pt-3"> O (<strong> ; </strong>) é utilizado cmo delimitador de instrução, porem, em javascript nós temos o ASI (Automatic Semicolon Insertion), ele é responsável por inserir automaticamente
+     o ( ; ) em determinadas situações, fazendo com que cada quebra de linha seja adicionado o ; automaticamente. No entando, existem casos específicos que podemso ter problemas com essas inserções automáticas. </p>
+
+     <h2>Blocos de Códigos</h2>
+     <p>Um <strong>bloco de código</strong> é uma coleção de algumas linhas de instruções. Um bloco é denotado por <strong>abre e fecha chaves</strong></p>
+
+     <div class="bg-light py-3 border rounded">
+<pre>
+  for (i = 1; i &lt;= 10; i++) {
+    console.log("i = ", i);
+  } 
+</pre>
+      </div>
+
+     <h2>Comentários</h2>
+     <p>Os <strong>comentários</strong> são linhas ignoradas pelo interpretador e usada para marcar, descrever ou explicar um trecho do código</p>
+     <p>Existem comentários de uma única linha (//), ou em blocos (/*  */)</p>
+
+     <div class="bg-light py-3 border rounded">
+<pre>
+  // comentário em uma linha
+
+  /* 
+     isso é um comentário longo
+     de multiplas linhas
+   */
+</pre>
+      </div>
+
+      <div class="footer">
+        <hr class="my-5">
+        <h3 class="my-5">
+          <a class="link-danger" href="../modulo03.html">Sumário</a>
+        </h3>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
