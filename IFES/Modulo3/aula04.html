@@ -23,45 +23,187 @@
     <div class="cabecalho">
       <h1 class="">Variáveis</h1>
       <p class="d-inline-flex">Aula 04 :: </p>
-      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=ccD10SoR8OY&list=PL-mvLy2ws8ILul9l4US7OIVucjDwUZc0B&index=5"
-        target="_blank">Assistir no Youtube</a> 
+      <a class="d-inline-flex ms-2"
+        href="https://www.youtube.com/watch?v=ccD10SoR8OY&list=PL-mvLy2ws8ILul9l4US7OIVucjDwUZc0B&index=5"
+        target="_blank">Assistir no Youtube</a>
       <hr>
     </div>
 
-   
+
     <h2>Variáveis</h2>
     <p>As variáveis oferecem uma maneira comveniente de armazenar dados.</p>
     <p>Uma variável é um <strong>nome</strong> dado a um <strong>local de memória</strong>.</p>
-    <p>Quando uma variável é declada, de acordo com o tipo de dado que armazena, algum espaço é reservado para ela na memória do sistema.</p>
+    <p>Quando uma variável é declada, de acordo com o tipo de dado que armazena, algum espaço é reservado para ela na
+      memória do sistema.</p>
     <p>O javaScript pode lidar com diferentes tipos de dados (<strong>Data Type</strong>).</p>
     <img src="memoria.jpeg" class="img-thumbnail mb-3" style="width: 300px;">
     <p>Um nome de uma variável pode conter <strong>letras, números, underscore e cifrão ($)</strong>.</p>
     <p>O primeiro caractere de um nome de uma variável <strong>não pode ser um número</strong>.</p>
     <p>Palavras chaves <strong>não podem ser usadas</strong> como variável.</p>
-    <p>Para atribuirvalores a variáveis, usamos o <strong>operador de atribuiçãoo (=)</strong>. A sintaxe geral de atribuição de valores a variáveis é:</p>
-   
+    <p>Para atribuirvalores a variáveis, usamos o <strong>operador de atribuiçãoo (=)</strong>. A sintaxe geral de
+      atribuição de valores a variáveis é:</p>
 
-     <div class="bg-light py-3 mb-3 border rounded">
-<pre>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
   &lt;nome da variável> = &lt;valor>
 </pre>
-      </div>
-
-      <p>Não é necessário declarar o tipo da variável no momento da attribuição.</p>
-
-      <div class="footer">
-        <hr class="my-5">
-        <h3 class="my-5">
-          <a class="link-danger" href="../../modulo02.html">Sumário</a>
-        </h3>
-      </div>
-
     </div>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
+    <p>Não é necessário declarar o tipo da variável no momento da attribuição.</p>
+    <p> <strong>Atribuição multipla</strong></p>
+    <p>A atribuição múltipla de variáveis pode ser feita da seguinte forma: </p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  &lt;variável 1> = &lt;variável 2> =… &lt;variável n> = &lt;valor>
+  a = b = c = d = 100;
+</pre>
+    </div>
+
+    <h2>Tipos de dados</h2>
+    <p>JavaScript tem 7 tipos de dados padrões: </p>
+    <ul>
+      <li>Boolean: true e false</li>
+      <li>null</li>
+      <li>undefined</li>
+      <li>Number: 42 ou 3.14159</li>
+      <li>String: "João" ou ‘João’</li>
+      <li>Symbol</li>
+      <li>Object</li>
+    </ul>
+
+    <h2>Mostrar conteúdo de variáveis</h2>
+    <p>A maneira mais simples de exibir variáveis é usando a função <code> console.log.</code> Sintaxe geral: </p>
+
+    <div class="bg-light py-3 mb-3 ps-3 border rounded">
+      console.log (&lt;variável>) <br>
+      console.log (&lt;variável 1>, ..., &lt;variável n>)
+    </div>
+
+    <p>Constantes e variáveis podem ser combinadas
+      em uma única instrução console.log, separando
+      constantes e/ou variáveis strings usando
+      vírgulas.</p>
+
+    <div class="bg-light py-3 mb-3 ps-3 border rounded">
+      nome = "Maria";<br>
+      idade = 32;<br>
+      console.log("Nome:", nome, "Idade:", idade)<br>
+      ----------------------------------------------<br>
+      Nome: Maria Idade: 31
+    </div>
+
+    <p>Se quiser exibir algo em uma nova linha, você
+      pode incluir a sequência de caracteres <code>\n</code>
+      dentro da instrução console.log.</p>
+
+    <div class="bg-light py-3 mb-3 ps-3 border rounded">
+      nome = "Maria";<br>
+      idade = 32;<br>
+      console.log("\nNome:", nome, "\nIdade:", idade)<br>
+      ----------------------------------------------<br>
+      Nome: Maria<br>
+      Idade: 32<br>
+    </div>
+
+    <h2>Declaração de Variáveis</h2>
+    <p>Você pode declarar uma variável de três formas:</p>
+    <ul>
+      <li>Com a palavra chave <code>var</code>. Por exemplo, var x =
+        41. Esta sintaxe pode ser usada para declarar
+        tanto variáveis locais como variáveis globais.</li>
+      <li>Por simples adição de valor. Por exemplo, y =
+        42. Isso declara uma variável global. Essa
+        declaração gera um aviso de advertência no
+        JavaScript. Você não deve usar essa variante.
+      </li>
+      <li>Com a palavra chave <code>let</code>. Por exemplo, let z =
+        43. Essa sintaxe pode ser usada para declarar
+        uma variável local de escopo de bloco. </li>
+    </ul>
+
+    <div class="bg-light py-3 mb-3 ps-3 border rounded">
+      var x = 41 <br>
+      y = 42<br>
+      let z = 43<br>
+    </div>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // Demonstração de escopo de variável   &lt;
+  if (true) {
+    var x = 41;   // variável de escopo global ou local
+    y = 42;       // variável de escopo global
+    let z = 43;   // variável de escopo de bloco
+  }
+
+  console.log(x)
+  console.log(y)
+  console.log(z)
+  ----------------------------------------------
+  ReferenceError: z is not defined
+</pre>
+    </div>
+
+    <ul>
+      <li>A declaração <code>const</code> cria uma variável cujo o
+        valor é fixo, ou seja, uma constante somente
+        leitura. Isso não significa que o valor é imutável,
+        apenas que a variável constante não pode ser
+        alterada ou retribuída.</li>
+    </ul>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  const nome1 = valor1;
+  const PI = 3.14;
+</pre>
+    </div>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // define PI como uma constante e lhe atribui o valor 3.14
+  const PI = 3.14;
+  
+  // tentar atribuir novo valor para constante (TypeError)
+  PI = 20;
+  
+  // a variável PI possui o valor 3.14
+  console.log("meu número favorito é: ", PI);
+  
+  // tentar redeclarar a constante emite um erro:
+  // SyntaxError: Identifier 'PI' has already been declared
+  //const PI = 20;
+  
+  // o nome PI está reservado para a constante acima, logo irá falhar
+  var PI = 20;
+  
+  // isso também vai falhar
+  let PI = 20;
+  
+  // const deve ser inicializada:
+  // SyntaxError: missing = in const declaration
+  const AUX;
+</pre>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo02.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 
 </body>
