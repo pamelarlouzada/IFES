@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>Entrada de Dados</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">Entrada de Dados</h1>
+      <p class="d-inline-flex">Aula 06 :: </p>
+      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=cs-ra9Zyi0A&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a>
+      <hr>
+    </div>
+
+
+    <h2>Módulo prompt-sync</h2>
+    <p>Os operadores são:</p>
+    <p>Todos os conceitos que aprendemos e os scripts
+      escritos até agora tinham valores de variáveis
+      codificados permanentemente. Nesta seção,
+      aprenderemos como aceitar a entrada do usuário.
+      A maneira mais fácil de aceitar a entrada do
+      usuário é usando o módulo <code> prompt-sync</code>.</p>
+    <p>A sintaxe básica da utilização deste módulo é:</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  const prompt = require('prompt-sync')();
+  &lt;variável> = prompt (&lt;mensagem de texto>)
+  
+  Exemplo:
+  nome = prompt ('Entre com seu nome: ')
+</pre>
+    </div>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  const prompt = require('prompt-sync')(
+  nome = prompt("Entre com seu nome: ")
+  idade = prompt("Entre com seu idade: ")
+  endereco = prompt("Entre com seu endereco: ")
+  
+  console.log("Nome: ", nome)
+  console.log("Idade: ", idade)
+  console.log("Endereço: ", endereco)
+
+  ----------------------------------------------
+  Nome:  Pâmela
+  Idade:  29
+  Endereço:  Jardim da Penha
+</pre>
+    </div>
+
+    <p><strong>Observação</strong>: caso deseje ler números para realizar operações
+      matemáticas, o tipo de dados String deve ser primeiro
+      convertido para o tipo de dados numérico</p>
+
+
+    <h2>Conversão de tipos de dados</h2>
+    <p>Existem várias funções integradas que nos ajudam
+      a realizar a conversão de tipo de dados. </p>
+
+    <p>A conversão de tipo de dados é particularmente
+      útil quando você lê dados do usuário. </p>
+
+    <p>Exemplo: Se você quiser ler dois números do usuário e
+      calcular sua soma.
+    </p>
+
+    <h3>Converter para Inteiro</h3>
+    <p>A sintaxe básica desta função é:</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  &lt;variável> = parseInt (&lt;x>)
+
+  Exemplo:
+  dados = prompt ('Entre com um número: '')
+  num = parseInt (dados)
+</pre>
+    </div>
+
+    <h3>Converter para Real</h3>
+    <p>A sintaxe básica desta função é:</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  &lt;variável> = parseFloat (&lt;x>)
+
+  Exemplo:
+  dados = prompt ('Entre com um número: '')
+  num = parseFloat (dados)
+</pre>
+    </div>
+
+    <h3>Converter para String</h3>
+    <p>A sintaxe básica desta função é:</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  &lt;variável> =  String (&lt;x>)
+
+  Exemplo:
+  z = 120
+  s = String (z)
+</pre>
+    </div>
+
+    <h3>Aplicações</h3>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // Sem converter tipos
+  const prompt = require('prompt-sync')();
+  
+  x = prompt("Digite o número 1: ")
+  y = prompt("Digite o número 2: ")
+  
+  // Somando as duas variáveis strings
+  soma = x + y
+  console.log("\nx:", x, "\ny:", y,)
+  console.log("\nsoma:", soma,)
+
+  ----------------------------------------------
+  x: 2
+  y: 3
+  
+  soma: 23
+</pre>
+    </div>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // Sem converter tipos
+  const prompt = require('prompt-sync')();
+  
+  x = parseInt(prompt("Digite o número 1: "))
+  y = parseInt(prompt("Digite o número 2: "))
+  
+  // Somando as duas variáveis strings
+  soma = x + y
+  console.log("\nx:", x, "\ny:", y,)
+  console.log("\nsoma:", soma,)
+
+  ----------------------------------------------
+  x: 2
+  y: 3
+  
+  soma: 5
+</pre>
+    </div>
+
+
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo02.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
