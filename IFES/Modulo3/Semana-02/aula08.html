@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>Comandos de Decisão Aninhados</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">Comandos de Decisão Aninhados</h1>
+      <p class="d-inline-flex">Aula 07 :: </p>
+      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=1bFpiRU7q2g&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a>
+      <hr>
+    </div>
+
+
+    <h2>Introdução</h2>
+    <p>Em algumas situações precisaremos encaixar os comandos de decisão para tratar as diversas possibilidades de fluxo
+      da execução do algoritmo. Isso quer dizer que podemos ter situações como:</p>
+    <ul>
+      <li>if dentro de outro if</li>
+      <li>if dentro de else</li>
+      <li>if dentro de else if</li>
+      <li>etc.</li>
+    </ul>
+
+    <h2>Exercício</h2>
+    <p>Dados três valores X, Y, Z, verificar se eles podem ser os comprimentos dos lados de um triângulo, e se forem,
+      verificar se o triângulo é equilátero, isósceles ou escaleno. Se eles não formarem um triângulo escrever uma
+      mensagem. A seguir serão colocadas propriedade e definições para o desenvolvimento do algoritmo:</p>
+    <p>O comprimento de cada lado de um triângulo é menor que
+      a soma dos comprimentos dos outros dois lados.
+    </p>
+
+    <ul>
+      <li>Triângulos equiláteros possuem os 3 lados iguais.</li>
+      <li>Triângulos isósceles possuem pelo menos dois lados iguais.</li>
+      <li>Triângulos escalenos possuem 3 lados diferentes.</li>
+    </ul>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // Comandos de decisão Aninhados
+  // Classificação de triângulos
+  
+  // importa o módulo prompt-sync
+  const prompt = require('prompt-sync')();
+  
+  x = parseFloat(prompt("Digite o valor de x: "))
+  y = parseFloat(prompt("Digite o valor de y: "))
+  z = parseFloat(prompt("Digite o valor de z: "))
+  
+  // Testa a propriedade para verificar se é um triângulo
+  if ((x + y > z) && (x + z > y) && (y + z > x)){
+      if ((x==y) && (y==z)){
+          console.log("Triângulo Equilátero")
+      } else if ((x==y) || (x==z) || (y==z)){
+          console.log("Triângulo Isósceles")
+      } else {
+          console.log("Triângulo Escaleno")
+      }
+  } else {
+      console.log("Os lados não formam um triângulo")
+  }   
+</pre>
+    </div>
+
+    
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo02.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

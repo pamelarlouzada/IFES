@@ -1,37 +1,16 @@
-// Entrada de dados do usuário
+// Positivo, negativo, zero
 
-// const prompt = require('prompt-sync')();
-
-// nome = prompt("Entre com seu nome: ")
-// idade = prompt("Entre com seu idade: ")
-// endereco = prompt("Entre com seu endereco: ")
-
-// console.log("Nome: ", nome)
-// console.log("idade: ", idade)
-// console.log("endereco: ", endereco)
-
-
-// Sem converter tipos
-// const prompt = require('prompt-sync')();
-
-// x = prompt("Digite o número 1: ")
-// y = prompt("Digite o número 2: ")
-
-// // Somando as duas variáveis strings
-// soma = x + y
-// console.log("\nx:", x, "\ny:", y,)
-// console.log("\nsoma:", soma,)
-
-// Convertendo tipos
+// importa o módulo prompt-sync
 const prompt = require('prompt-sync')();
 
-x = parseInt(prompt("Digite o número 1: "))
-y = parseInt(prompt("Digite o número 2: "))
+// comando para entrada de dados do usuário
+num = parseInt(prompt('Digite um número: '))
 
-// Somando as duas variáveis strings
-soma = x + y
-console.log("\nx:", x, "\ny:", y,)
-console.log("\nsoma:", soma,)
-
-
-
+// Checa se num é + - 0
+if (num > 0) {
+    console.log("O número: ", num, "é positivo.\n")
+} else if (num <0){
+    console.log("O número: ", num, "é negativo.\n")
+} else {
+    console.log("O número: ", num, "é zero.\n")
+}
