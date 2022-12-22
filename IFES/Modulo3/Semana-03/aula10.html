@@ -29,133 +29,49 @@
     </div>
 
 
-    <h2>For</h2>
-    <p>Os laços (loops) são usados para executar um bloco de código repetidamente, desde que uma condição seja atendida.
+    <h2>Exercício</h2>
+    <p>Falta enunciado
     </p>
-    <p>Em JavaScript, existem três tipos de laços:</p>
-
-    <ul>
-      <li>Laço for</li>
-      <li>Laço while</li>
-      <li>Laço do while</li>
-    </ul>
-
-    <p><code>
-      Laço while e do while</code>: normalmente utilizado quando NÃO sabemos a quantidade de repetições<br>
-      Exemplo: leia números do usuário até que o mesmo digite o número 0.</p>
-
-    <p>A sintaxe geral de escrever um loop for é:</p>
 
     <div class="bg-light py-3 mb-3 border rounded">
       <pre>
-  for (&lt;expressão>; &lt;condição>; &lt;incremento>){
-    # Instruções se a &lt;condição> for Verdadeira
-  } 
-</pre>
-    </div>
+  const prompt = require("prompt-sync") nome = prompt("Digite seu nome: ");
+  var salarioBruto = parseFloat(prompt("Digite seu salário bruto: "));
+  var dependentes = parseInt(prompt("Digite o número de dependentes: "));
 
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  // Demonstração do laço for 
-  for (i=1; i&lt;=10; i++){
-      console.log(i*3)
+  for (i=1; i &lt;= dependentes; i++) {
+    var ganhoDependente = parseFloat(prompt("Informe o ganho do dependente: "));
+    salarioBruto += ganhoDependente 
   }
+
+  console.log("Salário bruto: ", salarioBruto)
+
+  var rendaPercapta = salarioBruto/(dependentes+1)
+  console.log("Renda por pessoa: ", rendaPercapta)
+
+  if (rendaPercapta &lt; 500){
+    console.log("Vc está insento do IR")
+  } else if (rendaPercapta &lt; 1903.99) {
+    ir = salarioBruto*0.05
+    console.log("IR a pagar: ", ir)
+  } else if (rendaPercapta &lt; 2826.66) {
+    ir = salarioBruto*0.075
+    console.log("IR a pagar: ", ir) 
+  } else {
+    ir = salarioBruto*0.15
+    console.log("IR a pagar: ", ir)
+  }
+
+  console.log("Renda Líquida: ", (salarioBruto - ir))
 </pre>
     </div>
 
-    <h2>While</h2>
-    <p>A sintaxe geral de escrever um loop while é:</p>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  while (&lt;condição>) {
-    # Instruções se a &lt;condição> for Verdadeira
-   }  
-</pre>
-    </div>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  // Demonstração do laço wh  
-  i=1
-
-  while (i&lt;=10){
-      console.log(i*3)
-      i++
-  }    
-</pre>
-    </div>
-
-
-    <h2>do while</h2>
-    <p>A sintaxe geral de escrever um loop do while é:</p>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  do {
-    # Instruções se a &lt;condição> for Verdadeira
-  } while (&lt;condição>) ;            
-</pre>
-    </div>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  // Demonstração do laço do while
-  i=1
-  
-  do {
-      console.log(i*3)
-      i++
-  } while (i&lt;=10)          
-</pre>
-    </div>
-
-    <h2>Instruções de controle de laço</h2>
-    <p>O procedimento normal de execução do laço é - as instruções dentro do bloco do laço continuarão sendo executadas enquanto a condição especificada for avaliada como <strong>true</strong> . </p>
-    <p>Você pode alterar este processo de execução usando instruções de controle de laço.</p>
-    <p>Existem 2 instruções de controle: </p>
-    <ul>
-      <li>break</li>
-      <li>continue</li>
-    </ul>
-
-    <h3>break</h3>
-    <p>Uma instrução <strong> break</strong> encerrará a execução de um laço e o controle sairá do laço.</p>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  cont = 1
-  while (cont &lt;=10){
-      if (cont == 5){
-          break
-      }
-      console.log(cont)
-      cont++
-  }     
-</pre>
-    </div>
-    <h3>continue</h3>
-    <p>Uma instrução <strong> continue</strong> pula as instruções restantes e o controle volta ao o início do laço, continuando assim com a próxima iteração.</p>
-
-    <div class="bg-light py-3 mb-3 border rounded">
-      <pre>
-  cont = 0
-  while (cont &lt;= 10){
-      cont++
-      
-      if (cont % 2 == 0){
-          continue
-      }
-      console.log(cont)  
-  }    
-</pre>
-    </div>
-
+    
 
     <div class="footer">
       <hr class="my-5">
       <h3 class="my-5">
-        <a class="link-danger" href="../../modulo02.html">Sumário</a>
+        <a class="link-danger" href="../../modulo03.html">Sumário</a>
       </h3>
     </div>
 
