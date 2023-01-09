@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>Métodos de um array</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">Coleções (Arrays)</h1>
+      <p class="d-inline-flex">Aula 11 :: </p>
+      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=vSpAnZpnlXc&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a>
+      <hr>
+    </div>
+
+
+    <h2>push()</h2>
+    <p>Adiciona um ou mais elementos no fim de um array e retorna o comprimento do array.
+      </p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['João', 'Maria', 'Augusto'];
+  var emp2 = emp.push('3')
+  
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ 'João', 'Maria', 'Augusto', '3' ]
+  4
+</pre>
+    </div>
+
+    <h2>pop()</h2>
+    <p>remove o último elemento de um array e retorna esse elemento.</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['João', 'Maria', 'Augusto'];
+  var emp2 = emp.pop()
+  
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ 'João', 'Maria' ]
+  Augusto
+</pre>
+  </div>
+
+    <h2>shift()</h2>
+    <p>Remove o primeiro elemento de um array e retorna esse elemento.</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['João', 'Maria', 'Augusto'];
+  var emp2 = emp.shift()
+  
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ 'Maria', 'Augusto' ]
+  João
+</pre>
+  </div>
+
+    <h2>unshift()</h2>
+    <p>Adiciona um ou mais elementos ao início do array e retorna seu novo comprimento.</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['João', 'Maria', 'Augusto'];
+  var emp2 = emp.unshift('Bia','Ana')
+  
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ 'Bia','Ana','João', 'Maria', 'Augusto']
+  5
+</pre>
+  </div>
+
+    <h2>splice()</h2>
+    <p>Remove elementos de um array e (opcionalmente) os substitui, e retorna os itens que foram removidos do array</p>
+    <p>emp.splice(1,3,'a','b','c','d') - primeiro argumento se refere ao indice do array e o segundo se refere a quantidade de itens que srá retirada a partir do indice indicado no primeiro argumento. os demais ítens são os que serão acrescentados no novo array</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['1', '2', '3', '4', '5'];
+  var emp2 = emp.splice(1,3,'a','b','c','d') 
+
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ '1', 'a', 'b', 'c', 'd', '5' ]
+  [ '2', '3', '4' ]
+</pre>
+  </div>
+
+    <h2>sort()</h2>
+    <p>Ordena os elementos de um array.</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['João', 'Maria', 'Augusto'];
+  var emp2 = emp.sort()
+  
+  console.log(emp)
+  console.log(emp2)
+  --------------------------------------------
+  [ 'Augusto', 'João', 'Maria' ]
+  [ 'Augusto', 'João', 'Maria' ]
+</pre>
+  </div>
+
+    <h2>indexOf()</h2>
+    <p>Busca um elemento no array e retorna o índice da primeira ocorrência.</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var emp = ['a', 'b', 'a', 'c', 'd', 'b', 'c', 'b'];
+
+  console.log(emp.indexOf('b'))
+  console.log(emp.indexOf('b',3))
+  console.log(emp.indexOf('z'))
+  --------------------------------------------
+  1
+  5
+  -1
+</pre>
+  </div>
+    
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo03.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
