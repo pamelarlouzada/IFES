@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>Funções</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">Funções</h1>
+      <p class="d-inline-flex">Aula 12 :: </p>
+      <a class="d-inline-flex ms-2" href="https://www.youtube.com/watch?v=xaR4VUq1ih8&embeds_euri=https%3A%2F%2Fava3.cefor.ifes.edu.br%2F&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a>
+      <hr>
+    </div>
+
+
+    <h2>Definição de Função</h2>
+    <p>Uma função (também conhecida como método,
+      rotina ou sub-rotina) é um bloco de código que
+      executa uma tarefa ou um grupo de tarefas</p>
+    <p>Vimos muitas funções embutidas como
+      console.log, prompt, etc. Além das funções dos
+      arrays: push, pop, sort, etc.</p>
+    <p>Uma definição de função é o <code>bloco de código
+      reutilizável</code> sobre o qual falamos anteriormente e
+      que executa tarefas</p>
+    <p>A sintaxe geral é:</p>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  function &lt;nome da função> (&lt;parametros>){
+    # Corpo da função
+    #Declarações…
+    return &lt;valor>
+    }         
+</pre>
+    </div>
+
+    <p><b>Nome da função</b>: identifica uma função.</p>
+    <p><b>Parâmetros</b>: também conhecidos como
+      argumentos, são uma lista de variáveis que uma
+      função aceita.</p>
+    <p><b>Corpo da função</b>: é a parte central da definição
+      onde o trabalho computacional real desaparece.</p>
+    <p><b>Return</b>: a instrução de retorno opcional é usada
+      para retornar valores para a chamada de função</p>
+
+    <p>“Uma função sempre retorna
+      um valor, mas um
+      procedimento pode ou não
+      retornar um valor.” Guia JavaScript da Mozilla</p>
+    <p>“As funções sem valor de
+      retorno são chamadas de
+      procedimentos.” Livro: JavaScript - O guia definitivo</p>
+    
+    <h2>Argumentos default</h2>
+
+    <p>Os <code>argumentos</code> padrões são usados para definir
+      valores padrão para parâmetros de função.
+      Quando um parâmetro não é passado ao fazer
+      uma chamada de função, o valor padrão será
+      considerado e quando for passado, o valor
+      padrão será substituído pelo valor passado. A
+      sintaxe geral de definição de uma função com
+      variáveis padrão:</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  function &lt;nome da função> (&lt;parametro> = valor padrão){
+    // Corpo da função
+    }
+</pre>
+    </div>
+
+    <h2>Escopo de Variáveis</h2>
+    <p>Quando você declara uma variável fora de
+      qualquer função, ela é chamada de <code>variável
+      global</code>, porque está disponível para qualquer
+      outro código no documento atual.</p>
+    <p>Quando você declara uma variável dentro de
+      uma função, é chamada de <code>variável local</code>, pois ela
+      está disponível somente dentro dessa função.</p>
+    <p>Observação: <code>let</code> permite que você declare
+      variáveis limitando seu escopo no bloco.</p>
+    <p>Exemplos com variáveis globais:</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var a = 1 // variável global
+
+  function f1(){
+    b = 2  // variável global pela falta do var
+    console.log("f1() -a:", a)
+    console.log("f1() -b:", b)
+  }
+
+  function f2(){
+    b = 2  // variável global pela falta do var
+    console.log("f2() -a:", a)
+    console.log("f2() -b:", b)
+  }
+
+  f1()
+  f2()
+
+  console.log("a:",a)
+  console.log("b:",b)
+  --------------------------------------------
+  f1() -a: 1
+  f1() -b: 2
+  f2() -a: 1
+  f2() -b: 2
+  a: 1
+  b: 2        
+</pre>
+  </div>
+
+    <p>Exemplos com variáveis: globais e local</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var a = 1 // variável global
+
+  function f1(){
+    var b = 2  // variável local
+    console.log("f1() -a:", a)
+    console.log("f1() -b:", b)
+  }
+
+  function f2(){
+    console.log("f2() -a:", a)
+    console.log("f2() -b:", b)
+  }
+
+  f1()
+  f2()
+
+  console.log("a:",a)
+  console.log("b:",b)
+  --------------------------------------------
+  f1() -a: 1
+  f1() -b: 2
+  f2() -a: 1
+  C:\Users\pamela.louzada\Desktop\IFES\ifes\modulo3\semana-05\aula12.js:11
+      console.log("f2() -b:", b)
+                              ^
+  ReferenceError: b is not defined
+</pre>
+  </div>
+
+    <p>Exemplos com variáveis: globais, local e de bloco</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  var a = 1 // variável global
+
+  function f1(){
+    var b = 2  // variável local
+    if (true){
+      let c = 3  // variável de bloco
+      console.log("f1() - if - c:", c)
+    }
+    console.log("f1() -a:", a)
+    console.log("f1() -b:", b)
+    console.log("f1() -c:", c)
+  }
+          
+  f1()
+  --------------------------------------------
+  f1() - if - c: 3
+  f1() -a: 1
+  f1() -b: 2
+  C:\Users\pamela.louzada\Desktop\IFES\ifes\modulo3\semana-05\aula12.js:11
+    console.log("f1() -c:", c)
+                            ^
+  ReferenceError: c is not defined
+</pre>
+  </div>
+
+    <h2>Expressão de Função</h2>
+    <p>A palavra-chave <code>function</code> pode ser usada para
+      definir uma função dentro de uma expressão.</p>
+    <p>A principal diferença entre uma expressão de
+      função e a declaração de uma função é o nome
+      da função, o qual pode ser <code>omitido</code> em
+      expressões de funções para criar <code>funções
+      anônimas</code>.</p>
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  function [name]([param1], [param2], ..., [paramN]) {
+    // Corpo da função
+   }
+</pre>
+  </div>
+
+    <div class="bg-light py-3 mb-3 border rounded">
+      <pre>
+  // Expressões de função não nomeada
+  var q = function(n) {return n*n}
+  var resultado = q(4)
+  console.log(resultado)
+
+  // Expressões de função nomeada
+  var s = function somar(n1, n2) {return n1+n2}
+  var resultado = s(3,4)
+  console.log(resultado)
+  --------------------------------------------
+  16
+  7
+</pre>
+  </div>
+
+  <h2>Arrow Functions</h2>
+  <p>Uma expressão <code>arrow function</code> possui uma
+    sintaxe mais curta quando comparada a uma
+    expressão de função.</p>
+  <div class="bg-light py-3 mb-3 border rounded">
+<pre>
+  (param1, param2, …, paramN) => { // instruções } 
+</pre>
+  </div>
+  <div class="bg-light py-3 mb-3 border rounded">
+    <pre>
+  // Expressões com arrow function
+  var q = (n) => n*n
+  var resultado = q(4)
+  console.log(resultado)
+        
+  // Expressões com arrow function
+  var s = (n1, n2) => n1+n2
+  var resultado = s(3,4)
+  console.log(resultado)
+  --------------------------------------------
+  16
+  7
+</pre>
+</div>
+    
+
+    <div class="footer">
+      <hr class="my-5">
+      <h3 class="my-5">
+        <a class="link-danger" href="../../modulo03.html">Sumário</a>
+      </h3>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
