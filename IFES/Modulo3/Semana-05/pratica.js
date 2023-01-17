@@ -53,9 +53,9 @@ function excluir_bebida(codigo) {
         c = array_bebidas[i];
         console.log(array_bebidas)
         console.log(c)
-        // if (codigo == c.codigo){
-        //     array_bebidas.pop(i)
-        // }
+        if (codigo == c.codigo){
+            array_bebidas.pop(i)
+        }
     }
 }
 function listar_bebidas() {
