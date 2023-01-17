@@ -27,9 +27,10 @@ do {
 
         //chamar a função inserir
         inserir_bebida(bebida)
+
     } else if (opcao == 2) {
         console.log("\n\nExcluindo bebida...\n");
-        let codigo = prompt("Digite o código da bebida: ");
+        let codigo = parseInt(prompt("Digite o código da bebida: "));
         // chamar a função excluir 
         excluir_bebida(codigo)
     } else if (opcao == 3) {
@@ -44,19 +45,25 @@ do {
     console.clear();
 } while (opcao !=0)
 
+
 function inserir_bebida(bebida) {
     array_bebidas.push(bebida)
 }
 
-function excluir_bebida(codigo) {
-    for (var i=0; i <= array_bebidas.length; i++){
-        c = array_bebidas[i];
-        console.log(array_bebidas)
-        console.log(c)
-        // if (codigo == c.codigo){
-        //     array_bebidas.pop(i)
-        // }
+
+function excluir_bebida(cod) {
+    var novo_array = [];
+    for (var i=0; i < array_bebidas.length; i++){
+        var b = array_bebidas[i];
+        
+        if (cod != b.codigo){
+            novo_array.push(b)
+        } else {
+            continue
+        }
     }
+    array_bebidas = novo_array
+
 }
 function listar_bebidas() {
     console.log(array_bebidas)
