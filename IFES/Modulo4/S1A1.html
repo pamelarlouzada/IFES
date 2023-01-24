@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS only -->
+
+  <title>JavaScript DOM - Elementos</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="cabecalho">
+      <h1 class="">JavaScript DOM - Elementos</h1>
+      <p class="d-inline-flex">Aula 01 ::</p>
+      <a class="d-inline-flex" href="https://www.youtube.com/watch?v=D5CPy3NLcNQ&embeds_euri=https%3A%2F%2Fava3.cefor.ifes.edu.br%2F&feature=emb_imp_woyt"
+        target="_blank">Assistir no Youtube</a>
+      <hr>
+    </div>
+
+   
+    <h2>HTML, CSS, JavaScript</h2>
+    <p><b>HTML:</b> Linguagem de marcação utilizada para estruturar os elementos da página, como parágrafos, links, títulos, tabelas, imagens e até vídeos.</p>
+    <p><b>CSS:</b> Linguagem de estilos utilizada para definir cores, fontes, tamanhos, posicionamento e qualquer outro valor estético para os elementos da página.</p>
+    <p><b>Javascript:</b> Linguagem de programação utilizada para deixar a página com mais movimento, podendo atualizar elementos dinamicamente.</p>
+
+    <h2>O que é o DOM?</h2>
+    <p>DOM: Document Object Model</p>
+    <p>Representação em memória do arquivo HTML</p>
+    <p>O navegador cria um DOM da página</p>
+
+    <h2>Árvore DOM</h2>
+    <p>O modelo HTML DOM é construído como uma árvore de objetos (<b>Objects</b>)</p>
+    <img src="arvoredom1.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+    <p>Cada caixa é um Nó do documento: </p>
+    <img src="arvoredom2.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+    <p>Existem elementos pai (<b>parent</b>), filhos (<b>childs</b>) e
+      irmãos (<b>siblings</b>). Estes elementos são
+      caracterizados na forma como estão na árvore,
+      veja o exemplo na imagem abaixo:</p>
+    <img src="arvoredom3.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+    <p>Com o DOM, o JavaScript tem todo o poder necessário para criar HTML <b>dinamicamente:</b></p>
+    <ul>
+      <li>Alterando elementos HTML</li>
+      <li>Alterando atributos dos elementos HTML</li>
+      <li>Alterando estilos CSS</li>
+      <li>Removendo elementos HMTL e seus atributos</li>
+      <li>Adicionando elementos HMTL e seus atributos</li>
+      <li>Reagindo aos eventos que ocorrerem</li>
+      <li>Criando novos eventos</li>
+    </ul>
+
+      <p>Os <b>objetos</b> do DOM possuem métodos (<b>funções</b>) e atributos (<b>propriedades</b>)</p>
+      <ul>
+        <li>Funções do objeto document</li>
+        <ul>
+          <li>getElementById</li>
+          <li>write</li>
+          <li>addEventListener</li>
+        </ul>
+        <li>Propriedades do objeto document</li>
+        <ul>
+          <li>innerHTML </li>
+          <li>value</li>
+          <li>style</li>
+        </ul>
+      </ul>
+
+      <h2>Selecionando elementos</h2>
+      <p>Selecionando elementos na página:</p>
+      <ul>
+        <li>Pela tag: getElementsByTagName</li>
+        <li>Por identificação: getElementById</li>
+        <li>Por nome: getElementsByName</li>
+        <li>Por classe CSS: getElementsByClassName</li>
+        <li>Por seletor: querySelector</li>
+      </ul>
+
+      <h4>Exemplos:</h4>
+      <p>document.getElementsByTagName('h2')</p>
+      <img src="document.getElementsByTagName.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+      <p>document.getElementById('pais_brasil')</p>
+      <img src="document.getElementById.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+      <p>document.getElementsByName('cidade')</p>
+      <img src="document.getElementsByName.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+      <p>document.getElementsByClassName('cidade-mg')</p>
+      <img src="document.getElementsByClassName.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+      <p>document.querySelector('#pais_brasil')</p>
+      <img src="document.querySelector.jpeg" class="img-thumbnail mb-3" style="width: 500px;">
+      
+    
+    
+       
+
+      <div class="footer">
+        <hr class="my-5">
+        <h3 class="my-5">
+          <a class="link-danger" href="../modulo04.html">Sumário</a>
+        </h3>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
