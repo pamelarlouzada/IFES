@@ -43,12 +43,23 @@ const calculadora = require('./calculadora');
 
 // os arquivos ficam listados no packagepackage.json
 
-var fs = require('fs');
-var pdf = require('html-pdf');
-var html = fs.readFileSync('./home.html', 'utf8');
-var options = { format: 'Letter' };
+// var fs = require('fs');
+// var pdf = require('html-pdf');
+// var html = fs.readFileSync('./home.html', 'utf8');
+// var options = { format: 'Letter' };
 
-pdf.create(html, options).toFile('./home.pdf', function(err, res) {
-    if (err) return console.log(err);
-    console.log(res);
-});
+// pdf.create(html, options).toFile('./home.pdf', function(err, res) {
+//     if (err) return console.log(err);
+//     console.log(res);
+// });
+
+
+var nome = "Pam";
+var sobrenome = '';
+function teste() {
+    var sobrenome = 'sobrenome ';
+    var completo = nome + sobrenome;
+    return sobrenome;
+}
+
+teste();
