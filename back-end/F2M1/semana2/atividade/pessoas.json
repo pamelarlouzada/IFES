@@ -1,0 +1,74 @@
+{
+    "pessoas": [
+        {
+            "nome":"Joice da Silva",
+            "endereço": "Rua Doutor Antonio Basilio, 988",
+            "Nacionalidade": "Brasileira",
+            "Idade": 26,
+            "Sexo": "Feminino"
+        },
+        {
+            "nome":"Ruan Cunha",
+            "endereço": "Av Travessa Santo Antônio, 469",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 69,
+            "Sexo": "Masuculino"
+        },
+        {
+            "nome":"Helena Ribeiro",
+            "endereço": "Conjunto Jardim Caramuru, 874",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 42,
+            "Sexo": "Feminino"
+        },
+        {
+            "nome":"Alexandre Kauê Oliver de Paula",
+            "endereço": "Rua José Domingos Borges, 1992",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 14,
+            "Sexo": "Masuculino"
+        },
+        {
+            "nome":"Antonio Enrico Gonçalves",
+            "endereço": "Rua Afonso Pena, 36",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 10,
+            "Sexo": "Masuculino"
+        },
+        {
+            "nome":"Luiz Alves",
+            "endereço": "Rua Rotary, 9",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 6,
+            "Sexo": "Masuculino"
+        },
+        {
+            "nome":"Clarice Assunção",
+            "endereço": "Praça Tenente Nobre, 15",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 22,
+            "Sexo": "Feminino"
+        },
+        {
+            "nome":"Aline Malu Cavalcanti",
+            "endereço": "Rua Farol de Natal, 89",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 75,
+            "Sexo": "Feminino"
+        },
+        {
+            "nome":"Lorena Souza",
+            "endereço": "Rua Cristiano Morais, 647",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 33,
+            "Sexo": "Feminino"
+        },
+        {
+            "nome":"Mirella Moraes",
+            "endereço": "Rua São Raimundo Nonato, 287",
+            "Nacionalidade": "Brasileiro",
+            "Idade": 40,
+            "Sexo": "Feminino"
+        }
+    ]
+}
