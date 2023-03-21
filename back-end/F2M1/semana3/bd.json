@@ -1,0 +1,14 @@
+{
+    "carros":[
+       {
+          "placa":"MSV-9265",
+          "nome":"T40",
+          "montadora":"JAC Motors"
+       },
+       {
+          "placa":"MWS 0697",
+          "nome":"Ka",
+          "montadora":"Ford"
+       }
+    ]
+ }
