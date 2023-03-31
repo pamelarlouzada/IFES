@@ -20,17 +20,20 @@ async function main() {
 
         switch (opcao) {
             case '1':
-                await listarCarros();
-                prompt(`
-Enter para continuar...`);
-                console.clear();
+                var data = await listarCarros();
+                const automovelFile = JSON.parse(data);
+                console.table(automovelFile.carros); // Imprime Automóveis 
+        
+//                 prompt(`
+// Enter para continuar...`);
+                // console.clear();
                 break;
 
             case '2':
                 await cadastrarCarro();
-                prompt(`
-Enter para continuar...`);
-                console.clear();
+//                 prompt(`
+// Enter para continuar...`);
+                // console.clear();
                 break;
 
             case '0':
@@ -63,11 +66,23 @@ async function cadastrarCarro() {
     
     var carro = {placa: placa, nome: nome, montadora: montadora};
     
-    // bd.push(carro);
+    var data = await listarCarros();
+    const automovelFile = JSON.parse(data);
+    automovelFile.carros.push(carro);
     try {
-       var carros = await obterCarros(); 
-       var lista = JSON.parse(carros).carros;
-       adicionarCarro(lista, carro);
+    //    var carros = await obterCarros(); 
+    //    var lista = JSON.parse(carros).carros;
+    //    adicionarCarro(lista, carro);
+    var json = JSON.stringify(automovelFile);
+
+    fs.writeFile('./bd.json', json, (erro) => {  // 3 parâmentros writeFile(): local onde quer salvar o aruivo | Conteúdeo do json | nome que quer dar para o arquivo
+
+        if (erro) {
+            return console.log("Ocorreu um erro");
+        }
+    
+        console.log('Arquivo criado/escrito com sucesso');
+    });
 
     } catch(erro) {
 
@@ -90,26 +105,26 @@ function adicionarCarro(lista, carro){
     });
 }
 
-
 async function listarCarros() {
-
+    console.log("Aqui 1")
     // Lendo arquivo automovel.json
-    fs.readFile("./bd.json", function(erro, data) {
-    
+    return new Promise(function (resolve, reject) {
+    fs.readFile("./bd.json", function(error, data) {
+        console.log("Aqui 2")
         // Check for errors
-        if (erro){
-            reject(erro);
-        }
-
-        resolve(data)
+        if (error) {
+            reject(error);
+          } else {
+            resolve(data);
+          }
     
         // Convertendo para JSON
-        const bd = JSON.parse(data);
-        
-        console.table(bd); // Imprime Automóveis 
+        // const automovelFile = JSON.parse(data);
+        // console.table(automovelFile); // Imprime Automóveis 
     });
+});
 }
 
 
-main();
+  main();
 
